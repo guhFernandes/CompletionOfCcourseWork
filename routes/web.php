@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard', ['x'=>'']);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -27,5 +28,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::post('/add/category', [CategoryController::class, 'create'])->middleware(['auth', 'verified']);
+Route::get('/list/category', [CategoryController::class, 'getCategoryAll'])->middleware(['auth', 'verified']);
+Route::post('/editar/category', [CategoryController::class, 'getCategory'])->middleware(['auth', 'verified']);
+Route::post('/update/category', [CategoryController::class, 'updateCategory'])->middleware(['auth', 'verified']);
+Route::post('/deletar/category', [CategoryController::class, 'deleteCategory'])->middleware(['auth', 'verified']);
+Route::post('/search/category', [CategoryController::class, 'search'])->middleware(['auth', 'verified']);
+
 
 require __DIR__.'/auth.php';
