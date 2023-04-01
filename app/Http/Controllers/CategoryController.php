@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class CategoryController extends Controller
 {
@@ -13,7 +14,7 @@ class CategoryController extends Controller
         $db->name = $request->name;
         $db->save();
 
-        return redirect('/dashboard');
+        return redirect('/list/category');
         // ->with('msg','Cadastrado com sucesso!')
     }
 
@@ -28,7 +29,7 @@ class CategoryController extends Controller
     public function updateCategory (Request $request) {
 
         $db = Category::find($request->id);
-        $db->description = $request->description;
+        $db->name = $request->name;
         $db->save();
         return $this->getCategoryAll();
     }
@@ -40,7 +41,7 @@ class CategoryController extends Controller
     }
 
     public function search(Request $request) {
-        $db = Category::where('description', 'LIKE', '%' . $request->search. '%')
+        $db = Category::where('name','LIKE', '%' . $request->search. '%')
                 ->get();
         return view('dashboard',['x'=>"list", 'type'=>'category', 'list'=>$db]);
     }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CollectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,13 @@ Route::post('/editar/category', [CategoryController::class, 'getCategory'])->mid
 Route::post('/update/category', [CategoryController::class, 'updateCategory'])->middleware(['auth', 'verified']);
 Route::post('/deletar/category', [CategoryController::class, 'deleteCategory'])->middleware(['auth', 'verified']);
 Route::post('/search/category', [CategoryController::class, 'search'])->middleware(['auth', 'verified']);
+
+Route::post('/add/collection', [CollectionController::class, 'create'])->middleware(['auth', 'verified']);
+Route::get('/list/collection', [CollectionController::class, 'getcollectionAll'])->middleware(['auth', 'verified']);
+Route::post('/editar/collection', [CollectionController::class, 'getCollection'])->middleware(['auth', 'verified']);
+Route::post('/update/collection', [CollectionController::class, 'updateCollection'])->middleware(['auth', 'verified']);
+Route::post('/deletar/collection', [CollectionController::class, 'deleteCollection'])->middleware(['auth', 'verified']);
+Route::post('/search/collection', [CollectionController::class, 'search'])->middleware(['auth', 'verified']);
 
 
 require __DIR__.'/auth.php';
