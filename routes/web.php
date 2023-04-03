@@ -38,11 +38,18 @@ Route::post('/deletar/category', [CategoryController::class, 'deleteCategory'])-
 Route::post('/search/category', [CategoryController::class, 'search'])->middleware(['auth', 'verified']);
 
 Route::post('/add/collection', [CollectionController::class, 'create'])->middleware(['auth', 'verified']);
-Route::get('/list/collection', [CollectionController::class, 'getcollectionAll'])->middleware(['auth', 'verified']);
+Route::get('/list/collection', [CollectionController::class, 'getCollectionAll'])->middleware(['auth', 'verified']);
 Route::post('/editar/collection', [CollectionController::class, 'getCollection'])->middleware(['auth', 'verified']);
 Route::post('/update/collection', [CollectionController::class, 'updateCollection'])->middleware(['auth', 'verified']);
 Route::post('/deletar/collection', [CollectionController::class, 'deleteCollection'])->middleware(['auth', 'verified']);
 Route::post('/search/collection', [CollectionController::class, 'search'])->middleware(['auth', 'verified']);
+
+Route::post('/add/clothing', [ClothingController::class, 'create'])->middleware(['auth', 'verified']);
+Route::get('/list/clothing', [ClothingController::class, 'getClothingAll'])->middleware(['auth', 'verified']);
+Route::post('/editar/clothing', [ClothingController::class, 'getClothing'])->middleware(['auth', 'verified']);
+Route::post('/update/clothing', [ClothingController::class, 'updateClothing'])->middleware(['auth', 'verified']);
+Route::post('/deletar/clothing', [ClothingController::class, 'deleteClothing'])->middleware(['auth', 'verified']);
+Route::post('/search/clothing', [ClothingController::class, 'search'])->middleware(['auth', 'verified']);
 
 
 require __DIR__.'/auth.php';

@@ -10,19 +10,19 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <label for="name" class="form-label">Referencia da roupa</label>
-                                <input class="form-control form-control-lg" type="number"
-                                    aria-label=".form-control-lg example">
-                            </div>
-                            <div class="col-12">
-                                <label for="name" class="form-label">Descrição da roupa</label>
+                                <label for="name" class="form-label">Referencia do produto</label>
                                 <input class="form-control form-control-lg" type="text"
                                     aria-label=".form-control-lg example">
                             </div>
                             <div class="col-12">
-                                <label for="name" class="form-label">Descrição da roupa</label>
+                                <label for="name" class="form-label">Nome do produto</label>
                                 <input class="form-control form-control-lg" type="text"
-                                    aria-label=".form-control-lg example">
+                                    aria-label=".form-control-lg example" name="name">
+                            </div>
+                            <div class="col-12">
+                                <label for="name" class="form-label">Descrição do produto</label>
+                                <input class="form-control form-control-lg" type="text"
+                                    aria-label=".form-control-lg example" name="description">
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <label for="name" class="form-label">Coleção</label>

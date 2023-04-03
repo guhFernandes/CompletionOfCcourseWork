@@ -23,6 +23,7 @@ class ClothingController extends Controller
         $db = new Clothing;
         $db->reference = $request->reference;
         $db->name = $request->name;
+        $db->description = $request->description;
         $db->price = $request->price;
         $db->category_id = $request->category_id;
         $db->user_id = $request->user_id;

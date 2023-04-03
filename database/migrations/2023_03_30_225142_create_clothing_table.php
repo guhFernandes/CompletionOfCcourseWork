@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('reference', 10);
             $table->string('name');
+            $table->string('description');
             $table->float('price',8,2);
-            $table->string('path', 45);
+            $table->string('patch', 45);
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->foreignId('collection_id');
