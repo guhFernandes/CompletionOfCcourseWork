@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Collection;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class CategoryController extends Controller
@@ -19,7 +20,7 @@ class CategoryController extends Controller
     }
 
     public function getCategoryAll() {
-        return view('dashboard',['x'=>"list", 'type'=>"category", 'list'=> Category::all()]);
+        return view('dashboard',['x'=>"list", 'type'=>"category", 'list'=> Category::all(),'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 
     public function getCategory (Request $request) {

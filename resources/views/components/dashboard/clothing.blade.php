@@ -24,22 +24,27 @@
                                 <input class="form-control form-control-lg" type="text"
                                     aria-label=".form-control-lg example" name="description">
                             </div>
+                            <div class="col-12">
+                                <label for="name" class="form-label">Valor do produto</label>
+                                <input class="form-control form-control-lg" name="" type="number"
+                                    aria-label=".form-control-lg example">
+                            </div>
                             <div class="col-lg-6 col-sm-12">
                                 <label for="name" class="form-label">Coleção</label>
                                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                     <option selected disabled>Escolha...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    @foreach($collection as $key)
+                                    <option value="{{$key->id}}">{{$key->description}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <label for="name" class="form-label">Tipo</label>
                                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                     <option selected disabled>Escolha...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    @foreach($category as $key)
+                                    <option value="{{$key->id}}">{{$key->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-12">

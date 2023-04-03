@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Collection;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -19,7 +20,7 @@ class CollectionController extends Controller
     }
 
     public function getCollectionAll() {
-        return view('dashboard',['x'=>"list", 'type'=>"collection", 'list'=> collection::all()]);
+        return view('dashboard',['x'=>"list", 'type'=>"collection", 'list'=> Collection::all(),'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 
     public function getCollection (Request $request) {

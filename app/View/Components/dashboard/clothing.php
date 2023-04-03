@@ -11,9 +11,14 @@ class clothing extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+
+    public $collection;
+    public $category;
+
+    public function __construct($collection,$category)
     {
-        //
+        $this->collection=$collection;
+        $this->category=$category;
     }
 
     /**

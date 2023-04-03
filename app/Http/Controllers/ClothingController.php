@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Clothing;
+use App\Models\Collection;
 
 class ClothingController extends Controller
 {
@@ -61,6 +63,7 @@ class ClothingController extends Controller
         $db = Clothing::find($request->id);
         $db->reference = $request->reference;
         $db->name = $request->name;
+        $db->description = $request->description;
         $db->price = $request->price;
         $db->category_id = $request->category_id;
         $db->user_id = $request->user_id;
@@ -83,5 +86,10 @@ class ClothingController extends Controller
         $db = Clothing::where('description', 'LIKE', '%' . $request->search . '%')
             ->get();
         return view('dashboard', ['x' => "list", 'type' => 'clothing', 'list' => $db]);
+    }
+
+    public function dashboard() 
+    {
+        return view('dashboard',['x'=>'','collection'=>Collection::all(),'category'=>Category::all()]);
     }
 }
