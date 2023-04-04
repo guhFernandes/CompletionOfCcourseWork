@@ -57,8 +57,42 @@
                         </div>
                     </div>
                 @elseif($service == 'clothing')
-                    <p class="card-text">{{ $key->name }}</p>
-                    <p class="card-text">{{ $key->description }}</p>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center shadow-lg" style="width: 18rem; margin: auto;">
+                        <div class="card-body">
+                            <h4>#{{$key->reference}}</h4>
+                            <img src="{{Storage::url($key->patch)}}" class="h-100 card-img mb-2" alt="{{$key->patch}}">
+                            <p class="fs-5">{{$key->name}}</p>
+                            <p class="fs-5">{{$key->collection_id}} | {{$key->category_id}}</p>
+                            <h4>R${{$key->price}},00</h4>
+                        </div>
+                        <div class="d-flex justify-content-between card-footer">
+                            <form action="/editar/{{ $service }}" method="post">
+                                @csrf
+                                <input type="hidden" name="id" value="{{ $key->id }}">
+                                <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/editar.png') }}" width="45"height="45" alt="editar"></button>
+                            </form>
+                            <form action="/deletar/{{ $service }}" method="post">
+                                @csrf
+                                <input type="hidden" name="id" value="{{ $key->id }}">
+                                    <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/excluir.png') }}" width="45" height="45" alt="excluir"></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                 @elseif($service == 'user_email')
                     <p class="card-text">{{ $key->name }}</p>
                     <p class="card-text">{{ $key->email }}</p>

@@ -44,6 +44,6 @@ class CategoryController extends Controller
     public function search(Request $request) {
         $db = Category::where('name','LIKE', '%' . $request->search. '%')
                 ->get();
-        return view('dashboard',['x'=>"list", 'type'=>'category', 'list'=>$db]);
+                return view('dashboard',['x'=>"list", 'type'=>"category", 'list'=> $db,'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 }

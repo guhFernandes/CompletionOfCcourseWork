@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Collection extends Model
 {
@@ -11,4 +12,9 @@ class Collection extends Model
 
     protected $table = 'collection';
     protected $primaryKey = 'id';
+
+    public function collectionBusca(): HasOne
+    {
+        return $this->hasOne(Clothing::class);
+    }
 }

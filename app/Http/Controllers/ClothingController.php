@@ -39,7 +39,8 @@ class ClothingController extends Controller
 
     public function getClothingAll()
     {
-        return view('dashboard', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all()]);
+        
+        return view('dashboard', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all(), 'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 
     public function getClothing(Request $request)
@@ -83,9 +84,9 @@ class ClothingController extends Controller
 
     public function search(Request $request)
     {
-        $db = Clothing::where('description', 'LIKE', '%' . $request->search . '%')
+        $db = Clothing::where('name', 'LIKE', '%' . $request->search . '%')
             ->get();
-        return view('dashboard', ['x' => "list", 'type' => 'clothing', 'list' => $db]);
+        return view('dashboard', ['x' => "list", 'type' => 'clothing', 'list' => $db ,'collection'=>Collection::all(),'category'=>Category::all()]);
     }
 
     public function dashboard() 

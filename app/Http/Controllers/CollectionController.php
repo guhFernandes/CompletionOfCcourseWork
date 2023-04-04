@@ -44,6 +44,6 @@ class CollectionController extends Controller
     public function search(Request $request) {
         $db = collection::where('description','LIKE', '%' . $request->search. '%')
                 ->get();
-        return view('dashboard',['x'=>"list", 'type'=>'collection', 'list'=>$db]);
+        return view('dashboard',['x'=>"list", 'type'=>'collection', 'list'=>$db, 'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 }

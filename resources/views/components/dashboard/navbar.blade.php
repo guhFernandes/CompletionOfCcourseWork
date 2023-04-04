@@ -41,7 +41,7 @@
                     <ul class="dropdown-menu text-center">
                         <li><button type="button" class="dropdown-item" data-bs-toggle="modal"
                                 data-bs-target="#produto">Adicionar</button></li>
-                        <li><a class="dropdown-item" href="#">Listar</a></li>
+                        <li><a class="dropdown-item" href="/list/clothing">Listar</a></li>
                     </ul>
                 </li>
                 <li class="nav-item text-center dropdown">
