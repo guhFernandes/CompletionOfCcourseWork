@@ -21,7 +21,7 @@
     <x-dashboard.clothing :collection="$collection" :category="$category"/>
     
     <!-- Modal Usuario -->
-    <x-dashboard.user_email/>
+    <x-dashboard.user/>
 
 
 

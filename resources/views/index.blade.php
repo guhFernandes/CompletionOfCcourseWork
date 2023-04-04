@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <title>High Fashion</title>
-</head>
-<body>
+@extends('layouts.layout')
+@section('title', 'Index')
+@section('content')
     <!-- Inicio do nav -->
     <nav class="navbar navbar-expand-lg bg-primary py-4">
         <div class="container-fluid ">
-            <a href="index.html" class="me-5"><img src="src/imagem/logo.png" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <a href="index.html" class="me-5"><img src="{{ asset('storage/imagem/logo.png') }}" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="{{ asset('storage/imagem/icon/menu-hamburguer.png') }}" alt="menu-hamburguer">
             </button>
             <div class="row collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="col-lg-11 navbar-nav">
@@ -36,31 +29,57 @@
                 </ul>
                 <ul class="col-lg-1 navbar-nav">
                     <li class="nav-item float-end text-center">
-                        <button class="btn btn-info text-white fs-4">Login</button>
+                        <button class="btn btn-info text-white fs-4"><a href="/login"
+                                style="text-decoration:none; color:white">Login</a></button>
                     </li>
-                </ul>   
+                </ul>
             </div>
         </div>
     </nav>
     <!-- Fim do nav -->
 
     <!-- Inicio do carrossel -->
-    <div class="container-fluid">
+    {{-- <div class="container">
         <div class="row">
             <div class="col-12">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner ">
                         <div class="carousel-item active">
-                            <img src="src/imagem/banner/banner-1.png" class="d-block w-100"  alt="...">
+                            <img src="{{asset('storage/imagem/banner/slider-1.jpg')}}" class="d-block w-100"  alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="src/imagem/banner/banner-2.png" class="d-block w-100 "  alt="...">
+                            <img src="{{asset('storage/imagem/banner/slider-2.jpg')}}" class="d-block w-100 "  alt="...">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div> --}}
+
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('storage/imagem/banner/slider-1.jpg') }}" alt="" width="100%" height="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('storage/imagem/banner/slider-2.jpg') }}" alt="" width="100%" height="100%">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+
+
+
+
     <!-- Fim do carrossel -->
 
     <h1 class="display-6 m-5 text-center">Produtos</h1>
@@ -72,17 +91,17 @@
             <div class="carousel-item active">
                 <div class="d-flex justify-content-evenly container-sm">
                     <div class="card overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/bermuda.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Bermuda</a> 
+                                    <a class="btn btn-primary fs-5" href="#" role="button">Bermuda</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/blazer.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/blazer.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -92,7 +111,7 @@
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/blusa.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/blusa.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -102,7 +121,7 @@
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/body.jpg " class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/body.jpg') }} " class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -118,7 +137,7 @@
             <div class="carousel-item">
                 <div class=" d-flex justify-content-evenly container-sm">
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/bolsa.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/bolsa.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -128,7 +147,7 @@
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/calca.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/calca.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -138,7 +157,7 @@
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/colete.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/colete.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -148,7 +167,7 @@
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/jaqueta.jpg " class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/jaqueta.jpg') }} " class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -205,11 +224,13 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bg-dark p-4 rounded-4 " aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon bg-dark  p-4 rounded-4" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -326,8 +347,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
         </div>
     </div>
     <!--Fim Cards Fixed-->
@@ -336,19 +357,20 @@
     <div class="container">
         <div class="row mt-5 text-justify">
             <div class="col-lg-5">
-                <img src="src/imagem/banner/banner-3.png" class="card-img" width="500" height="500" alt="">
+                <img src="{{ asset('storage/imagem/banner/banner-3.png') }}" class="card-img" width="500"
+                    height="500" alt="">
             </div>
             <div class="col-lg-7  m-auto">
                 <h1 id="dicademoda">Dica de Modas</h1>
-                <p class="lh-base fs-5"> 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dicta 
-                    impedit velit officia veritatis asperiores nobis doloremque vel, corporis, 
-                    quia porro sequi consequatur laudantium dolore cumque voluptatibus sapiente 
-                    eligendi aliquid? Atque corrupti illo blanditiis eveniet eos, possimus fuga 
-                    sint iure! Tempore sequi enim consequatur sunt distinctio, explicabo ex vero 
-                    maxime ab dolorem debitis veritatis reiciendis culpa dignissimos! Quo, dolorum 
-                    commodi. Voluptates, cumque! Architecto, vel. Aliquam neque tempore nisi corrupti 
-                    facilis tenetur facere ipsam fugit ab, quod, enim aliquid doloremque odit molestiae 
+                <p class="lh-base fs-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dicta
+                    impedit velit officia veritatis asperiores nobis doloremque vel, corporis,
+                    quia porro sequi consequatur laudantium dolore cumque voluptatibus sapiente
+                    eligendi aliquid? Atque corrupti illo blanditiis eveniet eos, possimus fuga
+                    sint iure! Tempore sequi enim consequatur sunt distinctio, explicabo ex vero
+                    maxime ab dolorem debitis veritatis reiciendis culpa dignissimos! Quo, dolorum
+                    commodi. Voluptates, cumque! Architecto, vel. Aliquam neque tempore nisi corrupti
+                    facilis tenetur facere ipsam fugit ab, quod, enim aliquid doloremque odit molestiae
                     adipisci dolorem in? Saepe ut facilis fugiat at temporibus!
                 </p>
                 <div class="text-center">
@@ -360,14 +382,14 @@
             <div class="col-lg-7 m-auto">
                 <h1 id="aboutUs">Institucional</h1>
                 <p class="lh-base fs-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dicta 
-                    impedit velit officia veritatis asperiores nobis doloremque vel, corporis, 
-                    quia porro sequi consequatur laudantium dolore cumque voluptatibus sapiente 
-                    eligendi aliquid? Atque corrupti illo blanditiis eveniet eos, possimus fuga 
-                    sint iure! Tempore sequi enim consequatur sunt distinctio, explicabo ex vero 
-                    maxime ab dolorem debitis veritatis reiciendis culpa dignissimos! Quo, dolorum 
-                    commodi. Voluptates, cumque! Architecto, vel. Aliquam neque tempore nisi corrupti 
-                    facilis tenetur facere ipsam fugit ab, quod, enim aliquid doloremque odit molestiae 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dicta
+                    impedit velit officia veritatis asperiores nobis doloremque vel, corporis,
+                    quia porro sequi consequatur laudantium dolore cumque voluptatibus sapiente
+                    eligendi aliquid? Atque corrupti illo blanditiis eveniet eos, possimus fuga
+                    sint iure! Tempore sequi enim consequatur sunt distinctio, explicabo ex vero
+                    maxime ab dolorem debitis veritatis reiciendis culpa dignissimos! Quo, dolorum
+                    commodi. Voluptates, cumque! Architecto, vel. Aliquam neque tempore nisi corrupti
+                    facilis tenetur facere ipsam fugit ab, quod, enim aliquid doloremque odit molestiae
                     adipisci dolorem in? Saepe ut facilis fugiat at temporibus!
                 </p>
                 <div class="text-center">
@@ -375,7 +397,8 @@
                 </div>
             </div>
             <div class="col-lg-5">
-                <img src="src/imagem/banner/banner-4.png" class="card-img"  width="500" height="500" alt="">
+                <img src="{{ asset('storage/imagem/banner/banner-4.png') }}" class="card-img" width="500"
+                    height="500" alt="">
             </div>
         </div>
     </div>
@@ -386,7 +409,8 @@
         <div class="container-fluid mt-5 ">
             <div class="row text-center">
                 <div class="col-lg-3 mb-3">
-                    <img src="src/imagem/logo.png" class="img-card" width="240" height="100" alt="logo">
+                    <img src="{{ asset('storage/imagem/logo.png') }}" class="img-card" width="240" height="100"
+                        alt="logo">
                 </div>
                 <div class="col-lg-3 mb-3">
                     <h2 class="text-white">Contato</h2>
@@ -399,28 +423,47 @@
                 <div class="col-lg-3 mb-3">
                     <h2 class="text-white">Link</h2>
                     <ul class="list-unstyled fs-5">
-                        <a class="link-offset-2 link-underline link-underline-opacity-0" href=""><li class="text-white">Home</li></a>
-                        <a class="link-offset-2 link-underline link-underline-opacity-0" href=""><li class="text-white">Produto</li></a>
-                        <a class="link-offset-2 link-underline link-underline-opacity-0" href=""><li class="text-white">Sobre nós</li></a>
-                        <a class="link-offset-2 link-underline link-underline-opacity-0" href=""><li class="text-white">Ajuda</li></a>
+                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="">
+                            <li class="text-white">Home</li>
+                        </a>
+                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="">
+                            <li class="text-white">Produto</li>
+                        </a>
+                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="">
+                            <li class="text-white">Sobre nós</li>
+                        </a>
+                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="">
+                            <li class="text-white">Ajuda</li>
+                        </a>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-3">
                     <h2 class="text-white">Midia Social</h2>
                     <ul class="list-unstyled fs-5">
-                        <a href=""><li><img src="src/imagem/icon/facebook.png" width="40" height="40" alt="facebook"></li></a>
-                        <a href=""><li><img src="src/imagem//icon/instagram.png" width="40" height="40" alt="instagram"></li></a>
-                        <a href=""><li><img src="src/imagem/icon/twitter.png" width="40" height="40" alt="twitter"></li></a>
+                        <a href="">
+                            <li><img src="{{ asset('storage/imagem//icon/instagram.png') }}" width="40"
+                                    height="40" alt="instagram"></li>
+                        </a>
+                        <a href="">
+                            <li><img src="{{ asset('storage/imagem/icon/twitter.png') }}" width="40" height="40"
+                                    alt="twitter"></li>
+                        </a>
+                        <a href="">
+                            <li><img src="{{ asset('storage/imagem/icon/facebook.png') }}" width="40" height="40"
+                                    alt="facebook"></li>
+                        </a>
                     </ul>
                 </div>
                 <div class="col-12 mt-2">
-                   <p class="text-white fs-5"> &copy; <script>  now = new Date, document.write(now.getFullYear())</script> | high fashion confecções ltda</p>
+                    <p class="text-white fs-5"> &copy;
+                        <script>
+                            now = new Date, document.write(now.getFullYear())
+                        </script> | high fashion confecções ltda
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Fim do Footer -->
-    
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+@endsection

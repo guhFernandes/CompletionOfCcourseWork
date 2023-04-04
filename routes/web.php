@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\ClothingController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -19,7 +20,7 @@ use App\Http\Controllers\ClothingController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 
@@ -52,6 +53,13 @@ Route::post('/editar/clothing', [ClothingController::class, 'getClothing'])->mid
 Route::post('/update/clothing', [ClothingController::class, 'updateClothing'])->middleware(['auth', 'verified']);
 Route::post('/deletar/clothing', [ClothingController::class, 'deleteClothing'])->middleware(['auth', 'verified']);
 Route::post('/search/clothing', [ClothingController::class, 'search'])->middleware(['auth', 'verified']);
+
+Route::post('/add/user', [UserController::class, 'create'])->middleware(['auth', 'verified']);
+Route::get('/list/user', [UserController::class, 'getUserAll'])->middleware(['auth', 'verified']);
+Route::post('/editar/user', [UserController::class, 'getUser'])->middleware(['auth', 'verified']);
+Route::post('/update/user', [UserController::class, 'updateUser'])->middleware(['auth', 'verified']);
+Route::post('/deletar/user', [UserController::class, 'deleteUser'])->middleware(['auth', 'verified']);
+Route::post('/search/user', [UserController::class, 'search'])->middleware(['auth', 'verified']);
 
 
 require __DIR__.'/auth.php';

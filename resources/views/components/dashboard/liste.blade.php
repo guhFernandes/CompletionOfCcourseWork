@@ -75,27 +75,39 @@
                             <form action="/deletar/{{ $service }}" method="post">
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $key->id }}">
-                                    <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/excluir.png') }}" width="45" height="45" alt="excluir"></button>
+                                <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/excluir.png') }}" width="45" height="45" alt="excluir"></button>
                             </form>
                         </div>
                     </div>
                 </div>
+                @elseif($service == 'user')
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card shadow-lg" style="width: 18rem; margin: auto;">
+                            <div class="card-header">
+                                <h4 class="text-center">Usuario #{{$key->id}}</h4>
+                            </div>
+                            <div class="card-body">
+                                <h4>{{$key->name}} </h4>
+                                <p class="fs-5">{{$key->email}}</p>
+                            </div>
+                            <div class="d-flex justify-content-between card-footer">
+                                <form action="/editar/{{ $service }}" method="post">
+                                    @csrf
+                                <input type="hidden" name="id" value="{{ $key->id }}">
+                                <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/editar.png') }}" width="45"height="45" alt="editar"></button>
+                                </form>
+                                <form action="/deletar/{{ $service }}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $key->id }}">
+                                <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/excluir.png') }}" width="45" height="45" alt="excluir"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-                @elseif($service == 'user_email')
-                    <p class="card-text">{{ $key->name }}</p>
-                    <p class="card-text">{{ $key->email }}</p>
                 @endif
 
 

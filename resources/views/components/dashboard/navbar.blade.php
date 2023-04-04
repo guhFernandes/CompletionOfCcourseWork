@@ -1,7 +1,7 @@
 <!-- Inicio do nav-admin -->
 <nav class="navbar navbar-expand-lg bg-primary py-4">
     <div class="container-fluid ">
-        <a href="index.html" class="me-5"><img src="{{asset('storage/imagem/logo.png') }}" alt="logo"></a>
+        <a href="/" class="me-5"><img src="{{asset('storage/imagem/logo.png') }}" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <img src="{{asset('storage/imagem/icon/menu-hamburguer.png')}}" alt="menu-hamburguer">
@@ -50,9 +50,8 @@
                         Usuario
                     </a>
                     <ul class="dropdown-menu text-center">
-                        <li><button type="button" class="dropdown-item" data-bs-toggle="modal"
-                                data-bs-target="#novousuario">Adicionar</button></li>
-                        <li><a class="dropdown-item" href="#">Listar</a></li>
+                        <li><a class="dropdown-item" href="/register">Adicionar</a></li>
+                        <li><a class="dropdown-item" href="/list/user">Listar</a></li>
                     </ul>
                 </li>
             </ul>
