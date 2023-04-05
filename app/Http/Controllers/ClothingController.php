@@ -40,12 +40,12 @@ class ClothingController extends Controller
     public function getClothingAll()
     {
         
-        return view('dashboard', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all(), 'collection'=>Collection::all(), 'category'=>Category::all()]);
+        return view('dashboard', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all(), 'collection'=>Collection::all(), 'category'=>Category::all() ]);
     }
 
     public function getClothing(Request $request)
     {
-        return view('editClothing', ['list' => Clothing::find($request->id)]);
+        return view('editClothing', ['list' => Clothing::find($request->id), 'collection'=>Collection::all(), 'category'=>Category::all(), 'cat'=>Clothing::find($request->id)->category, 'col'=>Clothing::find($request->id)->collection]);
     }
 
     public function updateClothing(Request $request)
@@ -61,6 +61,10 @@ class ClothingController extends Controller
         } else {
             $nameStore = $request->patch;
         }
+
+
+
+
         $db = Clothing::find($request->id);
         $db->reference = $request->reference;
         $db->name = $request->name;
@@ -69,7 +73,7 @@ class ClothingController extends Controller
         $db->category_id = $request->category_id;
         $db->user_id = $request->user_id;
         $db->collection_id = $request->collection_id;
-        $db->patch = 'roupas/' . $nameStore;
+        $db->patch = $nameStore;
         $db->save();
         
         return $this->getClothingAll();
@@ -92,5 +96,11 @@ class ClothingController extends Controller
     public function dashboard() 
     {
         return view('dashboard',['x'=>'','collection'=>Collection::all(),'category'=>Category::all()]);
+    }
+
+    public function teste()
+    {
+        // dd(Clothing::find(8)->collection);
+        dd(Clothing::find(8)->category);
     }
 }

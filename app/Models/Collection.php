@@ -13,7 +13,7 @@ class Collection extends Model
     protected $table = 'collection';
     protected $primaryKey = 'id';
 
-    public function collectionBusca(): HasOne
+    public function clothing(): HasOne
     {
         return $this->hasOne(Clothing::class);
     }

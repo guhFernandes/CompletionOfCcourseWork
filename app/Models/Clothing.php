@@ -13,14 +13,16 @@ class Clothing extends Model
     protected $table = 'clothing';
     protected $primaryKey = 'id';
 
-    public function category(): BelongsTo
-    {
-        return $this->belongsTo(Category::class, 'category_id');
-    }
+   
 
     public function collection(): BelongsTo
     {
-        return $this->belongsTo(Collection::class, 'category_id');
+        return $this->belongsTo(Collection::class, 'collection_id');
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
 }

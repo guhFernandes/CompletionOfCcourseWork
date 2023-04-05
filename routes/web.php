@@ -61,5 +61,7 @@ Route::post('/update/user', [UserController::class, 'updateUser'])->middleware([
 Route::post('/deletar/user', [UserController::class, 'deleteUser'])->middleware(['auth', 'verified']);
 Route::post('/search/user', [UserController::class, 'search'])->middleware(['auth', 'verified']);
 
+Route::get('/teste', [ClothingController::class, 'teste']);
+
 
 require __DIR__.'/auth.php';

@@ -63,7 +63,7 @@
                             <h4>#{{$key->reference}}</h4>
                             <img src="{{Storage::url($key->patch)}}" class="h-100 card-img mb-2" alt="{{$key->patch}}">
                             <p class="fs-5">{{$key->name}}</p>
-                            <p class="fs-5">{{$key->collection_id}} | {{$key->category_id}}</p>
+                            {{-- <p class="fs-5">{{$cat->name}} | {{$col->description}}</p> --}}
                             <h4>R${{$key->price}},00</h4>
                         </div>
                         <div class="d-flex justify-content-between card-footer">

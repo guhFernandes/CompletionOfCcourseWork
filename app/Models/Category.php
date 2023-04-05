@@ -13,7 +13,7 @@ class Category extends Model
     protected $table = 'category';
     protected $primaryKey = 'id';
 
-    public function categoryBusca(): HasOne
+    public function category(): HasOne
     {
         return $this->hasOne(Clothing::class);
     }
