@@ -92,7 +92,7 @@
                                 <p class="fs-5">{{$key->email}}</p>
                             </div>
                             <div class="d-flex justify-content-between card-footer">
-                                <form action="/editar/{{ $service }}" method="post">
+                                <form action="/profile" method="get">
                                     @csrf
                                 <input type="hidden" name="id" value="{{ $key->id }}">
                                 <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/editar.png') }}" width="45"height="45" alt="editar"></button>

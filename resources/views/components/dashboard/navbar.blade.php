@@ -61,7 +61,7 @@
                     {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu text-center">
-                    <li data-toggle="dropdown" ><a class="dropdown-item" href="#">Informação</a>
+                    <li data-toggle="dropdown" ><a class="dropdown-item" href="/profile">Informação</a>
                     </li>
                     <li>
                         <form method="POST" action="{{ route('logout') }}">
