@@ -1,70 +1,17 @@
 @extends('layouts.layout')
 @section('title', 'Index')
 @section('content')
-    <!-- Inicio do nav -->
-    <nav class="navbar navbar-expand-lg bg-primary py-4">
-        <div class="container-fluid ">
-            <a href="index.html" class="me-5"><img src="{{ asset('storage/imagem/logo.png') }}" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="{{ asset('storage/imagem/icon/menu-hamburguer.png') }}" alt="menu-hamburguer">
-            </button>
-            <div class="row collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="col-lg-11 navbar-nav">
-                    <li class="nav-item text-center">
-                        <a class="nav-link text-white fs-4" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item text-center">
-                        <a class="nav-link text-white fs-4" aria-current="page" href="produtos.html">Produtos</a>
-                    </li>
-                    <li class="nav-item text-center">
-                        <a class="nav-link text-white fs-4" href="#aboutUs">Sobre nós</a>
-                    </li>
-                    <li class="nav-item text-center">
-                        <a class="nav-link text-white fs-4" href="#contact">Contato</a>
-                    </li>
-                    <li class="nav-item text-center">
-                        <a class="nav-link text-white fs-4" href="#dicademoda">Dica de Moda</a>
-                    </li>
-                </ul>
-                <ul class="col-lg-1 navbar-nav">
-                    <li class="nav-item float-end text-center">
-                        <button class="btn btn-info text-white fs-4"><a href="/login"
-                                style="text-decoration:none; color:white">Login</a></button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Fim do nav -->
 
-    <!-- Inicio do carrossel -->
-    {{-- <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active">
-                            <img src="{{asset('storage/imagem/banner/slider-1.jpg')}}" class="d-block w-100"  alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('storage/imagem/banner/slider-2.jpg')}}" class="d-block w-100 "  alt="...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
+    <x-site.navbar />
 
 
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('storage/imagem/banner/slider-1.jpg') }}" alt="" width="100%" height="100%">
+                <img src="{{ asset('storage/imagem/banner/banner-1.png') }}" alt="" class="img-fluid">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('storage/imagem/banner/slider-2.jpg') }}" alt="" width="100%" height="100%">
+                <img src="{{ asset('storage/imagem/banner/banner-2.png') }}" alt="" class="img-fluid">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -183,7 +130,7 @@
             <div class="carousel-item">
                 <div class=" d-flex justify-content-evenly container-sm">
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/jardineira.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/jardineira.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -193,7 +140,7 @@
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/macacao.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/macacao.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -203,7 +150,7 @@
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/sandali.jpg" class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/sandali.jpg') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -213,7 +160,7 @@
                         </div>
                     </div>
                     <div class="card h-100 overflow-hidden rounded-4 shadow-lg" style="width: 18rem;">
-                        <img src="src/imagem/roupa/short.jpg " class="img-card" alt="">
+                        <img src="{{ asset('storage/imagem/roupa/short.jpg ') }}" class="img-card" alt="">
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
@@ -241,116 +188,34 @@
     <h1 class="display-6 m-5 text-center">Produtos em destaque</h1>
 
     <!--Inicio Cards Fixed-->
+
+
+
     <div class="container" id="custom-cards">
         <div class="row align-items-stretch g-3  ">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                    <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
-                    <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
-                        <ul class=" list-unstyled mt-auto">
-                            <li class="text-dark">
-                                <h4 class="card-title fs-4">Bermuda rosa feminina</h4>
-                                <p class="card-text fs-4">R$60,00</p>
-                            </li>
-                        </ul>
-                    </div>
+            @foreach ($result as $k)
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="/produto" style="text-decoration:none;">
+                        <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
+                            <img src="{{ Storage::url($k->patch) }}" class="img-card" alt="">
+                            <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
+                                <ul class=" list-unstyled mt-auto">
+                                    <li class="text-dark">
+                                        <h4 class="card-title fs-4">{{ $k->name }}</h4>
+                                        <p class="card-text fs-4">R${{ $k->price }},00</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                    <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
-                    <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
-                        <ul class=" list-unstyled mt-auto">
-                            <li class="text-dark">
-                                <h4 class="card-title fs-4">Bermuda rosa feminina</h4>
-                                <p class="card-text fs-4">R$60,00</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                    <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
-                    <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
-                        <ul class=" list-unstyled mt-auto">
-                            <li class="text-dark">
-                                <h4 class="card-title fs-4">Bermuda rosa feminina</h4>
-                                <p class="card-text fs-4">R$60,00</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                    <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
-                    <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
-                        <ul class=" list-unstyled mt-auto">
-                            <li class="text-dark">
-                                <h4 class="card-title fs-4">Bermuda rosa feminina</h4>
-                                <p class="card-text fs-4">R$60,00</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                    <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
-                    <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
-                        <ul class=" list-unstyled mt-auto">
-                            <li class="text-dark">
-                                <h4 class="card-title fs-4">Bermuda rosa feminina</h4>
-                                <p class="card-text fs-4">R$60,00</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                    <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
-                    <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
-                        <ul class=" list-unstyled mt-auto">
-                            <li class="text-dark">
-                                <h4 class="card-title fs-4">Bermuda rosa feminina</h4>
-                                <p class="card-text fs-4">R$60,00</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                    <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
-                    <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
-                        <ul class=" list-unstyled mt-auto">
-                            <li class="text-dark">
-                                <h4 class="card-title fs-4">Bermuda rosa feminina</h4>
-                                <p class="card-text fs-4">R$60,00</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                    <img src="src/imagem/roupa/bermuda.jpg" class="img-card" alt="">
-                    <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
-                        <ul class=" list-unstyled mt-auto">
-                            <li class="text-dark">
-                                <h4 class="card-title fs-4">Bermuda rosa feminina</h4>
-                                <p class="card-text fs-4">R$60,00</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
+            @endforeach
         </div>
     </div>
+
+
+
+
     <!--Fim Cards Fixed-->
 
     <!-- Inicio do Dica de Moda -->
@@ -374,7 +239,7 @@
                     adipisci dolorem in? Saepe ut facilis fugiat at temporibus!
                 </p>
                 <div class="text-center">
-                    <a class="btn btn-primary fs-3" href="#" role="button">Saiba mais</a>
+                    <a class="btn btn-primary fs-3" href="/dicas" role="button">Saiba mais</a>
                 </div>
             </div>
         </div>
@@ -393,7 +258,7 @@
                     adipisci dolorem in? Saepe ut facilis fugiat at temporibus!
                 </p>
                 <div class="text-center">
-                    <a class="btn btn-primary fs-3" href="#" role="button">Saiba mais</a>
+                    <a class="btn btn-primary fs-3" href="/about" role="button">Saiba mais</a>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -404,66 +269,7 @@
     </div>
     <!-- Fim do Dica de Moda -->
 
-    <!-- Inicio do Footer -->
-    <footer class="bg-primary mt-5 py-4">
-        <div class="container-fluid mt-5 ">
-            <div class="row text-center">
-                <div class="col-lg-3 mb-3">
-                    <img src="{{ asset('storage/imagem/logo.png') }}" class="img-card" width="240" height="100"
-                        alt="logo">
-                </div>
-                <div class="col-lg-3 mb-3">
-                    <h2 class="text-white">Contato</h2>
-                    <ul class="list-unstyled fs-5">
-                        <li class="text-white">Rua XXXXXXX, 28 SP-Brasil</li>
-                        <li class="text-white">highfasiion@highfashiion.com.br</li>
-                        <li class="text-white">(32) 3261 - 1234</li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-3">
-                    <h2 class="text-white">Link</h2>
-                    <ul class="list-unstyled fs-5">
-                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="">
-                            <li class="text-white">Home</li>
-                        </a>
-                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="">
-                            <li class="text-white">Produto</li>
-                        </a>
-                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="">
-                            <li class="text-white">Sobre nós</li>
-                        </a>
-                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="">
-                            <li class="text-white">Ajuda</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-3">
-                    <h2 class="text-white">Midia Social</h2>
-                    <ul class="list-unstyled fs-5">
-                        <a href="">
-                            <li><img src="{{ asset('storage/imagem//icon/instagram.png') }}" width="40"
-                                    height="40" alt="instagram"></li>
-                        </a>
-                        <a href="">
-                            <li><img src="{{ asset('storage/imagem/icon/twitter.png') }}" width="40" height="40"
-                                    alt="twitter"></li>
-                        </a>
-                        <a href="">
-                            <li><img src="{{ asset('storage/imagem/icon/facebook.png') }}" width="40" height="40"
-                                    alt="facebook"></li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="col-12 mt-2">
-                    <p class="text-white fs-5"> &copy;
-                        <script>
-                            now = new Date, document.write(now.getFullYear())
-                        </script> | high fashion confecções ltda
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <x-site.footer />
     <!-- Fim do Footer -->
 
 @endsection

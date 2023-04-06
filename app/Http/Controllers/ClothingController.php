@@ -98,9 +98,15 @@ class ClothingController extends Controller
         return view('dashboard',['x'=>'','collection'=>Collection::all(),'category'=>Category::all()]);
     }
 
-    public function teste()
+    public function store()
     {
-        // dd(Clothing::find(8)->collection);
-        dd(Clothing::find(8)->category);
+
+        $result = Clothing::all();
+        return view('index', ['result' => $result]);
     }
+
+
+
+
+
 }

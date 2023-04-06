@@ -19,11 +19,29 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/', [ClothingController::class, 'store']);
+
+
+
+Route::get('/produtos', function () {
+    return view('#');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
 
+Route::get('/dicas', function () {
+    return view('dica');
+});
+
+Route::get('/clothesAlone', function () {
+    return view('clothesAlone');
+});
 
 Route::get('/dashboard', [ClothingController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
