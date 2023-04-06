@@ -8,10 +8,10 @@
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('storage/imagem/banner/banner-1.png') }}" alt="" class="img-fluid">
+                <img src="{{ asset('storage/imagem/banner/banner-1.png') }}" alt="" height="100%" width="100%">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('storage/imagem/banner/banner-2.png') }}" alt="" class="img-fluid">
+                <img src="{{ asset('storage/imagem/banner/banner-2.png') }}" alt="" height="100%" width="100%">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">

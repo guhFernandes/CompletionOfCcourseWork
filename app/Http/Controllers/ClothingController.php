@@ -100,8 +100,14 @@ class ClothingController extends Controller
 
     public function store()
     {
+        $perPage = 8;
 
-        $result = Clothing::all();
+        if (!empty($keyword)) {
+            $result = Clothing::all()->latest()->paginate($perPage);
+        } else {
+            $result = Clothing::latest()->paginate($perPage);
+        }
+
         return view('index', ['result' => $result]);
     }
 

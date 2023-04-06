@@ -26,9 +26,8 @@ use App\Http\Controllers\UserController;
 Route::get('/', [ClothingController::class, 'store']);
 
 
-
-Route::get('/produtos', function () {
-    return view('#');
+Route::get('/produto', function () {
+    return view('clothesAlone');
 });
 
 Route::get('/about', function () {
@@ -39,9 +38,6 @@ Route::get('/dicas', function () {
     return view('dica');
 });
 
-Route::get('/clothesAlone', function () {
-    return view('clothesAlone');
-});
 
 Route::get('/dashboard', [ClothingController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
