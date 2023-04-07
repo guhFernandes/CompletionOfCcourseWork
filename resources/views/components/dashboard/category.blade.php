@@ -10,7 +10,7 @@
                 <form action="/add/category" method="post" enctype="multipart/form-data">
                     @csrf
                     <label for="description" class="form-label">Descrição</label>
-                    <textarea name="name" class="form-control" id="description" rows="6"></textarea>
+                    <input class="form-control form-control-lg" name="name" type="text" aria-label=".form-control-lg example" require>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

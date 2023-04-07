@@ -3,7 +3,7 @@
 @section('content')
 
     <x-dashboard.navbar />
-    <div class="container w-25">
+    <div class="container w-75">
         <div class="row mt-5 shadow-lg">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <form action="/update/category" class="mt-5 mb-2" method="post">

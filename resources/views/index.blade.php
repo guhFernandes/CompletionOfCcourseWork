@@ -4,7 +4,6 @@
 
     <x-site.navbar />
 
-
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -239,7 +238,7 @@
                     adipisci dolorem in? Saepe ut facilis fugiat at temporibus!
                 </p>
                 <div class="text-center">
-                    <a class="btn btn-primary fs-3" href="/dicas" role="button">Saiba mais</a>
+                    <a class="btn btn-primary fs-3 mb-2" href="/dicas" role="button">Saiba mais</a>
                 </div>
             </div>
         </div>
@@ -258,7 +257,7 @@
                     adipisci dolorem in? Saepe ut facilis fugiat at temporibus!
                 </p>
                 <div class="text-center">
-                    <a class="btn btn-primary fs-3" href="/about" role="button">Saiba mais</a>
+                    <a class="btn btn-primary fs-3 mb-2" href="/about" role="button">Saiba mais</a>
                 </div>
             </div>
             <div class="col-lg-5">

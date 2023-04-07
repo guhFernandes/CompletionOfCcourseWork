@@ -3,20 +3,20 @@
     <div class="container-fluid mt-5 ">
         <div class="row text-center">
             <div class="col-lg-3 mb-3">
-                <img src="{{ asset('storage/imagem/logo.png') }}" class="img-card" width="240" height="100"
-                    alt="logo">
+                <img src="{{ asset('storage/imagem/logo.png') }}" class="img-card m-lg-5" alt="logo">
             </div>
             <div class="col-lg-3 mb-3">
                 <h2 class="text-white">Contato</h2>
-                <ul class="list-unstyled fs-5">
-                    <li class="text-white"> R. Roberto Schincariol, 81 - Distrito Industrial</br>São João Nepomuceno - MG, 36680-000</li>
+                <ul class="list-unstyled ">
+                    <li class="text-white"> R. Roberto Schincariol, 81 - Distrito Industrial</li>
+                    <li class="text-white">São João Nepomuceno - MG, 36680-000</li>
                     <li class="text-white">highfasiion@highfashiion.com.br</li>
                     <li class="text-white">(32) 3261 - 7011</li>
                 </ul>
             </div>
             <div class="col-lg-3 mb-3">
                 <h2 class="text-white">Link</h2>
-                <ul class="list-unstyled fs-5">
+                <ul class="list-unstyled">
                     <a class="link-offset-2 link-underline link-underline-opacity-0" href="/">
                         <li class="text-white">Home</li>
                     </a>
