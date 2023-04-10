@@ -1,5 +1,5 @@
 <!-- Inicio do nav-admin -->
-<nav class="navbar navbar-expand-lg bg-primary py-4">
+<nav class="navbar navbar-expand-lg bg-navy py-4">
     <div class="container-fluid ">
         <a href="/" class="me-5"><img src="{{asset('storage/imagem/logo.png') }}" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"

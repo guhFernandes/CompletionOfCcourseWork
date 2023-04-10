@@ -3,7 +3,7 @@
     <div class="input-group w-75 mb-3">
         <input name="search" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Pesquise o produto...">
         <div class="input-group-append">
-            <button class="btn btn-primary" type="submit"><img src="{{ asset('storage/imagem/icon/lupa.png') }}" alt="lupa"></button>
+            <button class="btn-navy" type="submit"><img src="{{ asset('storage/imagem/icon/lupa.png') }}" alt="lupa"></button>
         </div>
     </div> 
 </form>
@@ -92,7 +92,7 @@
                                 <p class="fs-5">{{$key->email}}</p>
                             </div>
                             <div class="d-flex justify-content-between card-footer">
-                                <form action="/profile" method="get">
+                                <form action="/editar/user" method="post">
                                     @csrf
                                 <input type="hidden" name="id" value="{{ $key->id }}">
                                 <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/editar.png') }}" width="45"height="45" alt="editar"></button>

@@ -4,7 +4,7 @@
             height="500" alt="">
     </div>
     <div class="col-lg-7  m-auto">
-        <h1 id="dicademoda">Dica de Modas</h1>
+        <h1 id="dicademoda" class="text-navy">Dica de Modas</h1>
         <p class="lh-base fs-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dicta
             impedit velit officia veritatis asperiores nobis doloremque vel, corporis,
@@ -17,7 +17,7 @@
             adipisci dolorem in? Saepe ut facilis fugiat at temporibus!
         </p>
         <div class="text-center">
-            <a class="btn btn-primary fs-3 mb-2" href="/dicas" role="button">Saiba mais</a>
+            <a class="btn-navy fs-3 mb-2" href="/dicas" role="button">Saiba mais</a>
         </div>
     </div>
 </div>

@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('login') }}" method="post">
+                <form action="{{ route('login') }}" method="POST">
                     @csrf
                     <label for="email" class="form-label">Email</label>
                     <x-text-input id="email" class="form-control form-control-lg" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
@@ -18,7 +18,7 @@
                     <x-input-error :messages="$errors->get('password')" class="text-danger  mt-2" />
             </div>
             <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Log in</button>
+                    <button type="submit" class="btn-navy">Log in</button>
                 </form>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <!-- Inicio do Footer -->
-<footer class="bg-primary mt-5 py-4">
+<footer class="bg-navy mt-5 py-4">
     <div class="container-fluid mt-5 ">
         <div class="row text-center">
             <div class="col-lg-3 mb-3">
@@ -35,16 +35,13 @@
                 <h2 class="text-white">Midia Social</h2>
                 <ul class="list-unstyled fs-5">
                     <a href="">
-                        <li><img src="{{ asset('storage/imagem//icon/instagram.png') }}" width="40"
-                                height="40" alt="instagram"></li>
+                        <li><img src="{{ asset('storage/imagem//icon/instagram.png') }}" width="45" height="45" alt="instagram"></li>
                     </a>
                     <a href="">
-                        <li><img src="{{ asset('storage/imagem/icon/twitter.png') }}" width="40" height="40"
-                                alt="twitter"></li>
+                        <li><img src="{{ asset('storage/imagem/icon/twitter.png') }}" width="40" height="40" alt="twitter"></li>
                     </a>
                     <a href="">
-                        <li><img src="{{ asset('storage/imagem/icon/facebook.png') }}" width="40" height="40"
-                                alt="facebook"></li>
+                        <li><img src="{{ asset('storage/imagem/icon/facebook.png') }}" width="40" height="40" alt="facebook"></li>
                     </a>
                 </ul>
             </div>

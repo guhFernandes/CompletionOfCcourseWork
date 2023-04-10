@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title', 'Index')
+@section('title', 'High Fashion')
 @section('content')
 
     <x-site.navbar />
@@ -30,7 +30,7 @@
 
     <!-- Fim do carrossel -->
 
-    <h1 class="display-6 m-5 text-center">Produtos</h1>
+    <h1 class="display-6 m-5 text-navy text-center">Produtos</h1>
 
     <!-- Inicio Cards Moved -->
     <div id="carouselExampleControls" class="carousel slide mt-3" data-bs-ride="carousel">
@@ -43,7 +43,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Bermuda</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Bermuda</a>
                                 </li>
                             </ul>
                         </div>
@@ -53,7 +53,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Blazer</a>
+                                    <a class=" btn-navy fs-5" href="#" role="button">Blazer</a>
                                 </li>
                             </ul>
                         </div>
@@ -63,7 +63,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Blusa</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Blusa</a>
                                 </li>
                             </ul>
                         </div>
@@ -73,7 +73,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Body</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Body</a>
                                 </li>
                             </ul>
                         </div>
@@ -89,7 +89,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Bolsa</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Bolsa</a>
                                 </li>
                             </ul>
                         </div>
@@ -99,7 +99,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Calça</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Calça</a>
                                 </li>
                             </ul>
                         </div>
@@ -109,7 +109,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Colete</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Colete</a>
                                 </li>
                             </ul>
                         </div>
@@ -119,7 +119,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Jaqueta</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Jaqueta</a>
                                 </li>
                             </ul>
                         </div>
@@ -135,7 +135,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Jardineira</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Jardineira</a>
                                 </li>
                             </ul>
                         </div>
@@ -145,7 +145,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Macação</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Macacão</a>
                                 </li>
                             </ul>
                         </div>
@@ -155,7 +155,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Sandalia</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Sandalia</a>
                                 </li>
                             </ul>
                         </div>
@@ -165,7 +165,7 @@
                         <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                             <ul class=" list-unstyled mt-auto">
                                 <li class="text-center">
-                                    <a class="btn btn-primary fs-5" href="#" role="button">Short</a>
+                                    <a class="btn-navy fs-5" href="#" role="button">Short</a>
                                 </li>
                             </ul>
                         </div>
@@ -174,36 +174,36 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark p-4 rounded-4 " aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon bg-navy p-4 rounded-4 " aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark  p-4 rounded-4" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon bg-navy  p-4 rounded-4" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
     <!-- Fim Cards Moved -->
 
-    <h1 class="display-6 m-5 text-center">Produtos em destaque</h1>
+    <h1 class="display-6 m-5 text-navy text-center">Produtos em destaque</h1>
 
     <!--Inicio Cards Fixed-->
 
 
 
     <div class="container" id="custom-cards">
-        <div class="row align-items-stretch g-3  ">
+        <div class="row align-items-stretch g-3 ">
             @foreach ($result as $k)
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                    <a href="{{url('/produto/$k->id')}}"  style="text-decoration:none;">
+                    <a href="/produto" style="text-decoration:none;">
                         <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="{{ Storage::url($k->patch) }}" class="img-card" alt="">
                             <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                                 <ul class=" list-unstyled mt-auto">
                                     <li class="text-dark">
-                                        <h4 class="card-title fs-4">{{ $k->name }}</h4>
-                                        <p class="card-text fs-4">R${{ $k->price }},00</p>
+                                        <h4 class="text-navy fs-4">{{ $k->name }}</h4>
+                                        <p class="card-text text-navy fs-4">R${{ $k->price }},00</p>
                                     </li>
                                 </ul>
                             </div>
@@ -213,10 +213,6 @@
             @endforeach
         </div>
     </div>
-
-
-
-
     <!--Fim Cards Fixed-->
 
 

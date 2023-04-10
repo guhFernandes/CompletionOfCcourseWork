@@ -1,3 +1,20 @@
-.card-wrapper {
-    display: flex;
+.bg-navy {
+    background-color: #0B2447;
+
+}
+.text-navy {
+    color: #2B3467;
+}
+.btn-navy {
+    background-color: #19376D;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    color: #A5D7E8;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.btn-navy:hover {
+    background-color: #19376D;
+    background-image: linear-gradient(to right, #2551a3 , #19376D);
+    color: #A5D7E8;
 }
