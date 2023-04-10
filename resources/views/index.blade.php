@@ -196,7 +196,7 @@
         <div class="row align-items-stretch g-3  ">
             @foreach ($result as $k)
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                    <a href="/produto" style="text-decoration:none;">
+                    <a href="{{url('/produto/$k->id')}}"  style="text-decoration:none;">
                         <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
                             <img src="{{ Storage::url($k->patch) }}" class="img-card" alt="">
                             <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
