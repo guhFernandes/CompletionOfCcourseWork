@@ -1,5 +1,5 @@
 <!-- Inicio do nav -->
-<nav class="navbar navbar-expand-lg bg-primary py-4">
+<nav class="navbar navbar-expand-lg bg-navy py-4">
     <div class="container-fluid ">
         <a href="/" class="me-5"><img src="{{ asset('storage/imagem/logo.png') }}" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -24,11 +24,11 @@
             <ul class="col-lg-2 navbar-nav">
                 @auth
                     <li class="nav-item text-center">
-                        <a href="{{ url('/dashboard') }}" class="btn btn-info text-white fs-4">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}" class="btn-navy text-white fs-4">Dashboard</a>
                     </li>
                 @else
                     <li class="nav-item text-center">
-                        <button type="button" class="btn btn-info text-white fs-4" data-bs-toggle="modal" data-bs-target="#login">
+                        <button type="button" class="btn-navy text-white fs-4" data-bs-toggle="modal" data-bs-target="#login">
                             Login
                         </button>
                     </li>

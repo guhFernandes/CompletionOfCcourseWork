@@ -1,7 +1,7 @@
 <div class="row mt-3 text-justify">
     <div class="col-lg-7 m-auto">
-        <h1 id="aboutUs">Institucional</h1>
-        <p class="lh-base fs-5">
+        <h1 id="aboutUs" class="text-navy">Institucional</h1>
+        <p class="lh-base text-navy fs-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dicta
             impedit velit officia veritatis asperiores nobis doloremque vel, corporis,
             quia porro sequi consequatur laudantium dolore cumque voluptatibus sapiente
@@ -13,11 +13,11 @@
             adipisci dolorem in? Saepe ut facilis fugiat at temporibus!
         </p>
         <div class="text-center">
-            <a class="btn btn-primary fs-3 mb-2" href="/about" role="button">Saiba mais</a>
+            <a class="btn-navy fs-3" href="/about" role="button">Saiba mais</a>
         </div>
     </div>
     <div class="col-lg-5">
-        <img src="{{ asset('storage/imagem/banner/banner-4.png') }}" class="card-img" width="500"
-            height="500" alt="">
+        <img src="{{ asset('storage/imagem/banner/banner-4.png') }}" class="card-img mt-4" width="500"
+            height="500" alt="banner-4">
     </div>
 </div>
