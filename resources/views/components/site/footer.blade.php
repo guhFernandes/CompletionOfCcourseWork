@@ -3,7 +3,7 @@
     <div class="container-fluid mt-5 ">
         <div class="row text-center">
             <div class="col-lg-3 mb-3">
-                <img src="{{ asset('storage/imagem/logo.png') }}" class="img-card m-lg-5" alt="logo">
+                <a href="/"><img src="{{ asset('storage/imagem/logo.png') }}" class="img-card m-lg-5" alt="logo"></a>
             </div>
             <div class="col-lg-3 mb-3">
                 <h2 class="text-white">Contato</h2>
