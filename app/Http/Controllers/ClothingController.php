@@ -43,6 +43,12 @@ class ClothingController extends Controller
         return view('dashboard', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all(), 'collection'=>Collection::all(), 'category'=>Category::all() ]);
     }
 
+    public function getListClothing()
+    {
+        
+        return view('clothesAlone', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all(), 'collection'=>Collection::all(), 'category'=>Category::all() ]);
+    }
+
     public function getClothing(Request $request)
     {
         return view('editClothing', ['list' => Clothing::find($request->id), 'collection'=>Collection::all(), 'category'=>Category::all(), 'cat'=>Clothing::find($request->id)->category, 'col'=>Clothing::find($request->id)->collection]);
