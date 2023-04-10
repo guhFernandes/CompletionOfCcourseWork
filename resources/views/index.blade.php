@@ -4,6 +4,8 @@
 
     <x-site.navbar />
 
+    <x-site.login/>
+
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -217,12 +219,12 @@
 
     <!--Fim Cards Fixed-->
 
-    <!-- Inicio do Dica de Moda -->
+
     <div class="container">
         <x-site.dicas-moda/>
         <x-site.institucional/>
     </div>
-    <!-- Fim do Dica de Moda -->
+
 
     <x-site.footer />
     <!-- Fim do Footer -->

@@ -9,14 +9,14 @@
 </form>
 @if (isset($result))
     <div class="container">
-        <div class="row g-5">
+        <div class="row g-4">
             @foreach ($result as $key)
                 @if ($service == 'category')
+
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card shadow-lg" style="width: 18rem; margin: auto;">
+                        <div class="card shadow-lg" style="margin: auto;">
                             <div class="card-body">
-                                <h4 class="fs-5"style="text-transform: uppercase;">{{ $service }}
-                                    {{ $key->id }}</h4>
+                                <h4 class="fs-5 ">{{ $service }}{{ $key->id }}</h4>
                                 <p class="fs-5">{{ $key->name }}</p>
                             </div>
                             <div class="d-flex justify-content-between card-footer">
@@ -37,9 +37,9 @@
                     </div>
                 @elseif($service == 'collection')
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card shadow-lg" style="width: 18rem; margin: auto;">
+                        <div class="card shadow-lg" style="margin: auto;">
                             <div class="card-body">
-                                <h4 class="fs-5"style="text-transform: uppercase;">{{ $service }} {{ $key->id }}</h4>
+                                <h4 class="fs-5 text-uppercase">{{ $service }} {{ $key->id }}</h4>
                                 <p class="fs-5">{{ $key->description}}</p>
                             </div>
                             <div class="d-flex justify-content-between card-footer">
@@ -57,33 +57,33 @@
                         </div>
                     </div>
                 @elseif($service == 'clothing')
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card text-center shadow-lg" style="width: 18rem; margin: auto;">
-                        <div class="card-body">
-                            <h4>#{{$key->reference}}</h4>
-                            <img src="{{Storage::url($key->patch)}}" class="h-100 card-img mb-2" alt="{{$key->patch}}">
-                            <p class="fs-5">{{$key->name}}</p>
-                            {{-- <p class="fs-5">{{$cat->name}} | {{$col->description}}</p> --}}
-                            <h4>R${{$key->price}},00</h4>
-                        </div>
-                        <div class="d-flex justify-content-between card-footer">
-                            <form action="/editar/{{ $service }}" method="post">
-                                @csrf
-                                <input type="hidden" name="id" value="{{ $key->id }}">
-                                <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/editar.png') }}" width="45"height="45" alt="editar"></button>
-                            </form>
-                            <form action="/deletar/{{ $service }}" method="post">
-                                @csrf
-                                <input type="hidden" name="id" value="{{ $key->id }}">
-                                <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/excluir.png') }}" width="45" height="45" alt="excluir"></button>
-                            </form>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card text-center shadow-lg" style="width: 16rem; margin: auto;">
+                            <div class="card-body">
+                                <h4>#{{$key->reference}}</h4>
+                                <img src="{{Storage::url($key->patch)}}" class="h-100 card-img mb-2" alt="{{$key->patch}}">
+                                <p class="fs-5">{{$key->name}}</p>
+                                {{-- <p class="fs-5">{{$cat->name}} | {{$col->description}}</p> --}}
+                                <h4>R${{$key->price}},00</h4>
+                            </div>
+                            <div class="d-flex justify-content-between card-footer">
+                                <form action="/editar/{{ $service }}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $key->id }}">
+                                    <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/editar.png') }}" width="45"height="45" alt="editar"></button>
+                                </form>
+                                <form action="/deletar/{{ $service }}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $key->id }}">
+                                    <button type="submit" class="btn"><img src="{{ asset('storage/imagem/icon/excluir.png') }}" width="45" height="45" alt="excluir"></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @elseif($service == 'user')
 
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card shadow-lg" style="width: 18rem; margin: auto;">
+                        <div class="card shadow-lg" style="width: 16rem; margin: auto;">
                             <div class="card-header">
                                 <h4 class="text-center">Usuario #{{$key->id}}</h4>
                             </div>

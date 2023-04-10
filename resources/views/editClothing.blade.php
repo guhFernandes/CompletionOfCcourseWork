@@ -54,18 +54,6 @@
                     </select>
 
 
-
-{{-- 
-                    <div class="custom-file">
-                        <input type="hidden" name="patch" value="{{$list->patch}}">
-                        <input type="file" class="custom-file-input" id="inputGroupFile01" name="imagem" aria-describedby="inputGroupFileAddon01">
-                        <label for="inputGroupFile01" class="custom-file-label">Imagem do produto</label>
-                    </div>
-                     --}}
-
-
-
-
                     <input type="hidden" name="patch" value="{{ $list->patch }}">
                     <label for="formFileLg" class="form-label">Imagem do produto</label>
                     <input class="form-control form-control-lg mb-2" id="formFileLg" name="imagem" type="file">

@@ -7,7 +7,7 @@
             <img src="{{ asset('storage/imagem/icon/menu-hamburguer.png') }}" alt="menu-hamburguer">
         </button>
         <div class="row collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="col-lg-11 navbar-nav">
+            <ul class="col-lg-10 navbar-nav">
                 <li class="nav-item text-center">
                     <a class="nav-link text-white fs-4" aria-current="page" href="/">Home</a>
                 </li>
@@ -17,17 +17,22 @@
                 <li class="nav-item text-center">
                     <a class="nav-link text-white fs-4" href="/about">Sobre nós</a>
                 </li>
-                {{-- <li class="nav-item text-center">
-                    <a class="nav-link text-white fs-4" href="/contact">Contato</a>
-                </li> --}}
                 <li class="nav-item text-center">
                     <a class="nav-link text-white fs-4" href="/dicas">Dica de Moda</a>
                 </li>
             </ul>
-            <ul class="col-lg-1 navbar-nav">
-                <li class="nav-item float-end text-center">
-                    <a href="/login" class="btn btn-info text-white fs-4">Login</a>
-                </li>
+            <ul class="col-lg-2 navbar-nav">
+                @auth
+                    <li class="nav-item text-center">
+                        <a href="{{ url('/dashboard') }}" class="btn btn-info text-white fs-4">Dashboard</a>
+                    </li>
+                @else
+                    <li class="nav-item text-center">
+                        <button type="button" class="btn btn-info text-white fs-4" data-bs-toggle="modal" data-bs-target="#login">
+                            Login
+                        </button>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>

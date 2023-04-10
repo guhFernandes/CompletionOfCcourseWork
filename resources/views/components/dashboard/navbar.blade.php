@@ -50,7 +50,8 @@
                         Usuario
                     </a>
                     <ul class="dropdown-menu text-center">
-                        <li><a class="dropdown-item" href="/register">Adicionar</a></li>
+                        <li><button type="button" class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#user">Adicionar</button></li>
                         <li><a class="dropdown-item" href="/list/user">Listar</a></li>
                     </ul>
                 </li>

@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Sobre nós</title>
-</head>
-<body>
+@extends('layouts.layout')
+@section('title', 'Sobre nós')
+@section('content')
+
     <x-site.navbar />
+
+    <x-site.login/>
+
     <div class="container">
         <h2 class="text-center display-4 m-5">Sobre nós</h2>
         <div class="row">
@@ -55,24 +52,24 @@
                             <h2 >Contato</h2>
                         </div>
                         <div class="col-lg-6 mb-2">
-                            <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" required />
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" required />
                         </div>
                         <div class="col-lg-6 mb-2">
-                            <label for="exampleFormControlInput1" class="form-label">Sobrenome</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" required />
+                            <label for="lastname" class="form-label">Sobrenome</label>
+                            <input type="text" class="form-control" id="lastname" required />
                         </div>
                         <div class="col-12 mb-2">
-                            <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" required />
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required />
                         </div>
                         <div class="col-12 mb-2">
-                            <label for="exampleFormControlInput1" class="form-label">Assunto</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" required />
+                            <label for="subject" class="form-label">Assunto</label>
+                            <input type="text" class="form-control" id="subject" required />
                         </div>
                         <div class="col-12 mb-2">
-                            <label for="exampleFormControlTextarea1" class="form-label">Enviar Mensagem</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+                            <label for="description" class="form-label">Enviar Mensagem</label>
+                            <textarea class="form-control" id="description" rows="2" required></textarea>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary fs-4">Enviar</button>
@@ -80,6 +77,7 @@
             </div>
         </div>
     </div>
+
     <x-site.footer />
-</body>
-</html>
+
+ @endsection

@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Dica de moda</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-</head>
-<body>
+@extends('layouts.layout')
+@section('title', 'Dica de Moda')
+@section('content')
     <x-site.navbar />
+
+    <x-site.login/>
+
     <div class="container">
         <div class="row">
             <div class="col-12 mt-3">
@@ -70,8 +66,7 @@
            
         </div>
     </div>
+    
     <x-site.footer />
     
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+@endsection
