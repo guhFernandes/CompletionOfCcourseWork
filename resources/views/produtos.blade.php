@@ -5,16 +5,7 @@
     <x-site.navbar-prod />
     <x-site.login/>
 
-    <!-- Fim do nav --> 
-    {{-- <form action="#" method="post" class="container d-flex form-inline mt-2 justify-content-center">
-        <div class="input-group w-75 mb-3">
-            <input class="form-control" list="datalistOptions" size="40" id="exampleDataList" placeholder="Pesquise o produto...">
-            <div class="input-group-append">
-                <button class="btn-navy" type="submit"><img src="{{asset('storage/imagem/icon/lupa.png')}}" alt="lupa"></button>
-            </div>
-        </div>
-    </form> --}}
-    <form action="/search/clothing" method="post" class="container d-flex form-inline mt-2 justify-content-center">
+    <form action="" method="post" class="container d-flex form-inline mt-2 justify-content-center">
         @csrf
         <div class="input-group w-75 mb-3">
             <input name="search" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Pesquise o produto...">
