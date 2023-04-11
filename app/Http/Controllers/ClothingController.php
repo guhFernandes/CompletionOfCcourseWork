@@ -43,10 +43,10 @@ class ClothingController extends Controller
         return view('dashboard', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all(), 'collection'=>Collection::all(), 'category'=>Category::all() ]);
     }
 
-    public function getListClothing()
+    public function getListClothing($id)
     {
         
-        return view('clothesAlone', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all(), 'collection'=>Collection::all(), 'category'=>Category::all() ]);
+        return view('clothesAlone', ['x' => "list", 'type' => "clothing", 'list' => Clothing::find($id), 'collection'=>Collection::all(), 'category'=>Category::all(), 'cat'=>Clothing::find($id)->category, 'col'=>Clothing::find($id)->collection]);
     }
 
     public function getClothing(Request $request)
@@ -115,6 +115,12 @@ class ClothingController extends Controller
         }
 
         return view('index', ['result' => $result]);
+    }
+
+    public function produtos()
+    {
+        $result = Clothing::paginate(8);
+        return view('produtos', ['result' => $result]);
     }
 
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\ClothingController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmailController;
 
 
 /*
@@ -24,6 +25,10 @@ use App\Http\Controllers\UserController;
 // });
 
 Route::get('/', [ClothingController::class, 'store']);
+
+Route::post('/email',[EmailController::class,'contact']);
+
+Route::get('/produtos', [ClothingController::class, 'produtos']);
 
 Route::get('/about', function () {
     return view('about');
@@ -58,7 +63,7 @@ Route::post('/search/collection', [CollectionController::class, 'search'])->midd
 
 Route::post('/add/clothing', [ClothingController::class, 'create'])->middleware(['auth', 'verified']);
 Route::get('/list/clothing', [ClothingController::class, 'getClothingAll'])->middleware(['auth', 'verified']);
-Route::get('/produto', [ClothingController::class, 'getListClothing']);
+Route::get('/produto/{id}', [ClothingController::class, 'getListClothing']);
 Route::post('/editar/clothing', [ClothingController::class, 'getClothing'])->middleware(['auth', 'verified']);
 Route::post('/update/clothing', [ClothingController::class, 'updateClothing'])->middleware(['auth', 'verified']);
 Route::post('/deletar/clothing', [ClothingController::class, 'deleteClothing'])->middleware(['auth', 'verified']);
