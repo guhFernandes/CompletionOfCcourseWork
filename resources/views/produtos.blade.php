@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title', 'High Fashion')
+@section('title', 'High Fashion | Produtos')
 @section('content')
 
     <x-site.navbar-prod />
@@ -36,7 +36,7 @@
                 </div>
                 
             @endforeach
-            <div class="col-12 justify-content-center align-items-center">
+            <div class="col-12">
                 {{ $result->onEachSide(5)->links() }}
             </div>
         </div>

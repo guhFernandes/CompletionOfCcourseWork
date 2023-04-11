@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title', 'Sobre nós')
+@section('title', 'High Fashion | Sobre nós')
 @section('content')
 
     <x-site.navbar />

@@ -6,15 +6,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="/add/collection" method="post">
+                <form action="/add/collection" method="post" name="formulario">
                     @csrf
                     <label for="name" class="form-label">Nome</label>
                     <input name="description" class="form-control form-control-lg" type="text" id="name"
-                        aria-label=".form-control-lg example" />
+                        aria-label=".form-control-lg example"/>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn-navy">Adicionar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" onclick="validateField('name')" class="btn-navy">Adicionar</button>
                 </form>
             </div>
         </div>
