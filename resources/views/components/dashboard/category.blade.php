@@ -7,14 +7,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bg-body-tertiary">
-                <form action="/add/category" method="post" enctype="multipart/form-data">
+                <form action="/add/category" onsubmit=" voltarPaginaAnterior() " method="post"  enctype="multipart/form-data">
                     @csrf
-                    <label for="description" class="form-label">Descrição</label>
-                    <input class="form-control form-control-lg" name="name" type="text" aria-label=".form-control-lg example" require>
+                    <label for="category" class="form-label">Descrição</label>
+                    <input class="form-control form-control-lg" name="name" type="text" id="category" aria-label=".form-control-lg example" />
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn-navy">Adicionar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" onclick="validateField('category')" class="btn-navy">Adicionar</button>
                 </form>
             </div>
         </div>

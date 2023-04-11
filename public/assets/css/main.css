@@ -18,3 +18,9 @@
     background-image: linear-gradient(to right, #2551a3 , #19376D);
     color: #A5D7E8;
 }
+#desktop {
+    display: none;
+}
+#mobile {
+    display: none;
+}

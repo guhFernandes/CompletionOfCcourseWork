@@ -6,29 +6,29 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="/add/clothing" method="post" enctype="multipart/form-data">
+                <form action="/add/clothing" method="post"  enctype="multipart/form-data">
                     @csrf
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <label for="name" class="form-label">Referencia do produto</label>
-                                <input class="form-control form-control-lg" name="reference" type="text"
+                                <label for="reference" class="form-label">Referencia do produto</label>
+                                <input class="form-control form-control-lg" id="reference" name="reference" type="text"
                                     aria-label=".form-control-lg example">
                             </div>
                             <div class="col-12">
-                                <label for="name" class="form-label">Nome do produto</label>
+                                <label for="name-two" class="form-label">Nome do produto</label>
                                 <input class="form-control form-control-lg" type="text"
-                                    aria-label=".form-control-lg example" name="name">
+                                    aria-label=".form-control-lg example" id="name-two" name="name" require />
                             </div>
                             <div class="col-12">
-                                <label for="name" class="form-label">Descrição do produto</label>
+                                <label for="description-two" class="form-label">Descrição do produto</label>
                                 <input class="form-control form-control-lg" type="text"
-                                    aria-label=".form-control-lg example" name="description">
+                                    aria-label=".form-control-lg example" id="description-two" name="description" require/>
                             </div>
                             <div class="col-12">
-                                <label for="name" class="form-label">Valor do produto</label>
-                                <input class="form-control form-control-lg" name="price" type="number"
-                                    aria-label=".form-control-lg example">
+                                <label for="price" class="form-label">Valor do produto</label>
+                                <input class="form-control form-control-lg" id="price" name="price" type="number"
+                                    aria-label=".form-control-lg example" require/>
                             </div>
                             
                             <div class="col-lg-6 col-sm-12">
@@ -51,7 +51,7 @@
                             </div>
                             <div class="col-12">
                                 <label for="formFileLg" class="form-label">Imagem do produto</label>
-                                <input class="form-control form-control-lg" name="imagem" id="formFileLg" type="file">
+                                <input class="form-control form-control-lg" name="imagem" id="formFileLg" type="file" require/>
                             </div>
                             <div class="col-12 mt-1" >
                                 <label for="formFileLg" class="form-label">Cadastrado por</label>
@@ -62,8 +62,8 @@
                     </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn-navy">Adicionar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" onclick="validateField()" class="btn-navy">Adicionar</button>
                 </form>
             </div>
         </div>
