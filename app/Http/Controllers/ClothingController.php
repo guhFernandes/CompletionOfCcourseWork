@@ -99,6 +99,13 @@ class ClothingController extends Controller
         return view('dashboard', ['x' => "list", 'type' => 'clothing', 'list' => $db ,'collection'=>Collection::all(),'category'=>Category::all()]);
     }
 
+    public function searchProdutos(Request $request)
+    {
+        $db = Clothing::where('name', 'LIKE', '%' . $request->search . '%')
+            ->get();
+        return view('produtos', ['x' => "list", 'type' => 'clothing', 'list' => $db ,'collection'=>Collection::all(),'category'=>Category::all()]);
+    }
+
     public function dashboard() 
     {
         return view('dashboard',['x'=>'','collection'=>Collection::all(),'category'=>Category::all()]);
