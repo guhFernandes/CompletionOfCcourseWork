@@ -10,7 +10,7 @@
                 <form action="/add/category" onsubmit=" voltarPaginaAnterior() " method="post"  enctype="multipart/form-data">
                     @csrf
                     <label for="category" class="form-label">Descrição</label>
-                    <input class="form-control form-control-lg" name="name" type="text" id="category" aria-label=".form-control-lg example" />
+                    <input class="form-control form-control-lg" name="name" type="text" id="category" aria-label=".form-control-lg example" required />
             </div>
             <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

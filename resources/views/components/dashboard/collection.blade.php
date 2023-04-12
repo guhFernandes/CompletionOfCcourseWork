@@ -10,7 +10,7 @@
                     @csrf
                     <label for="name" class="form-label">Nome</label>
                     <input name="description" class="form-control form-control-lg" type="text" id="name"
-                        aria-label=".form-control-lg example"/>
+                        aria-label=".form-control-lg example" required/>
             </div>
             <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

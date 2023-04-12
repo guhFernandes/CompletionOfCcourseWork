@@ -13,27 +13,27 @@
                             <div class="col-12">
                                 <label for="reference" class="form-label">Referencia do produto</label>
                                 <input class="form-control form-control-lg" id="reference" name="reference" type="text"
-                                    aria-label=".form-control-lg example">
+                                    aria-label=".form-control-lg example" required/>
                             </div>
                             <div class="col-12">
                                 <label for="name-two" class="form-label">Nome do produto</label>
                                 <input class="form-control form-control-lg" type="text"
-                                    aria-label=".form-control-lg example" id="name-two" onkeyup="toLimit('name-two')" name="name" require />
+                                    aria-label=".form-control-lg example" id="name-two" onkeyup="toLimit('name-two')" name="name" required />
                             </div>
                             <div class="col-12">
                                 <label for="description-two" class="form-label">Descrição do produto</label>
                                 <input class="form-control form-control-lg" type="text"
-                                    aria-label=".form-control-lg example" id="description-two" name="description" require/>
+                                    aria-label=".form-control-lg example" id="description-two" name="description" required/>
                             </div>
                             <div class="col-12">
                                 <label for="price" class="form-label">Valor do produto</label>
                                 <input class="form-control form-control-lg" min="0" max="1000" id="price" name="price" type="number"
-                                    aria-label=".form-control-lg example" require/>
+                                    aria-label=".form-control-lg example" required/>
                             </div>
                             
                             <div class="col-lg-6 col-sm-12">
                                 <label for="name" class="form-label">Categoria</label>
-                                <select class="form-select form-select-lg mb-3" name="category_id" aria-label=".form-select-lg example">
+                                <select required class="form-select form-select-lg mb-3" name="category_id" aria-label=".form-select-lg example">
                                     <option selected disabled>Escolha...</option>
                                     @foreach($category as $key)
                                     <option value="{{$key->id}}">{{$key->name}}</option>
@@ -42,10 +42,10 @@
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <label for="name" class="form-label">Coleção</label>
-                                <select class="form-select form-select-lg mb-3" name="collection_id" aria-label=".form-select-lg example">
-                                    <option selected disabled>Escolha...</option>
+                                <select required class="form-select form-select-lg mb-3" name="collection_id" aria-label=".form-select-lg example">
+                                    <option  selected disabled>Escolha...</option>
                                     @foreach($collection as $key)
-                                    <option value="{{$key->id}}">{{$key->description}}</option>
+                                    <option  value="{{$key->id}}">{{$key->description}}</option>
                                     @endforeach
                                 </select>
                             </div>

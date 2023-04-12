@@ -80,7 +80,7 @@ Route::get('/test/{name}', [ClothingController::class, 'filterCategory']);
 
 Route::post('/add/user', [UserController::class, 'create'])->middleware(['auth', 'verified']);
 Route::get('/list/user', [UserController::class, 'getUserAll'])->middleware(['auth', 'verified']);
-Route::post('/editar/user', [UserController::class, 'getUser'])->middleware(['auth', 'verified']);
+Route::get('/editar/user', [UserController::class, 'getUser'])->middleware(['auth', 'verified']);
 Route::post('/update/user', [UserController::class, 'updateUser'])->middleware(['auth', 'verified']);
 Route::post('/deletar/user', [UserController::class, 'deleteUser'])->middleware(['auth', 'verified']);
 Route::post('/search/user', [UserController::class, 'search'])->middleware(['auth', 'verified']);
