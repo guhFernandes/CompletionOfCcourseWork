@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->float('price',8,2);
-            $table->string('patch', 45);
+            $table->string('patch');
             $table->foreignId('category_id');
-            $table->string('user_id',25);
+            $table->string('user',45);
             $table->foreignId('collection_id');
             $table->timestamps();
         });

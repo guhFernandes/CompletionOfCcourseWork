@@ -28,7 +28,7 @@ class ClothingController extends Controller
         $db->description = $request->description;
         $db->price = $request->price;
         $db->category_id = $request->category_id;
-        $db->user_id = $request->user_id;
+        $db->user = $request->user_id;
         $db->collection_id = $request->collection_id;
         $db->patch = 'roupas/' . $nameStore;
         $db->save();
@@ -77,7 +77,7 @@ class ClothingController extends Controller
         $db->description = $request->description;
         $db->price = $request->price;
         $db->category_id = $request->category_id;
-        $db->user_id = $request->user_id;
+        $db->user = $request->user_id;
         $db->collection_id = $request->collection_id;
         $db->patch = $nameStore;
         $db->save();
