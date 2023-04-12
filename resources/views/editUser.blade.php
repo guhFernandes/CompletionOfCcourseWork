@@ -24,11 +24,9 @@
                 <form method="post" action="{{ route('password.update') }}"  class="shadow p-3">
                     @csrf
                     @method('put')
+                    
                     <h3>Atualizar senha</h3>
                     <p>Certifique-se de que sua conta esteja usando uma senha longa e aleatória para se manter segura.</p>
-                   
-
-                    
 
                     <label for="current_password" class="form-label">Senha Atual</label>
                     <x-text-input id="current_password" name="current_password" type="password" class="form-control form-control-lg" autocomplete="current-password" />
