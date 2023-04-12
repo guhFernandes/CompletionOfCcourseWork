@@ -2,7 +2,7 @@
 @section('title', 'High Fashion | Produtos')
 @section('content')
 
-    <x-site.navbar-prod />
+    <x-site.navbar/>
     <x-site.login/>
 
     <form action="/search/produtos" method="post" class="container d-flex form-inline mt-2 justify-content-center">
@@ -15,7 +15,7 @@
         </div> 
     </form>
     <!--Inicio Cards Fixed-->
-    <div class="container" id="custom-cards">
+    <div class="container min-vh-100" id="custom-cards" >
         <h1 class="display-6 m-5 text-center">Produtos</h1>
         <div class="row align-items-stretch g-3 ">
             @foreach ($result as $k)
@@ -25,9 +25,9 @@
                             <img src="{{ Storage::url($k->patch) }}" class="img-card" alt="">
                             <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                                 <ul class=" list-unstyled mt-auto">
-                                    <li class="text-dark">
-                                        <h4 class="text-navy fs-4">{{ $k->name }}</h4>
-                                        <p class="card-text text-navy fs-4">R${{ $k->price }},00</p>
+                                    <li class="text-navy">
+                                        <h4 class="fs-4">{{ $k->name }}</h4>
+                                        <p class="card-text fs-4">R${{ $k->price }},00</p>
                                     </li>
                                 </ul>
                             </div>

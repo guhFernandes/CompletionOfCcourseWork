@@ -18,7 +18,7 @@
                             <div class="col-12">
                                 <label for="name-two" class="form-label">Nome do produto</label>
                                 <input class="form-control form-control-lg" type="text"
-                                    aria-label=".form-control-lg example" id="name-two" name="name" require />
+                                    aria-label=".form-control-lg example" id="name-two" onkeyup="toLimit('name-two')" name="name" require />
                             </div>
                             <div class="col-12">
                                 <label for="description-two" class="form-label">Descrição do produto</label>
@@ -27,7 +27,7 @@
                             </div>
                             <div class="col-12">
                                 <label for="price" class="form-label">Valor do produto</label>
-                                <input class="form-control form-control-lg" id="price" name="price" type="number"
+                                <input class="form-control form-control-lg" min="0" max="1000" id="price" name="price" type="number"
                                     aria-label=".form-control-lg example" require/>
                             </div>
                             
@@ -51,7 +51,16 @@
                             </div>
                             <div class="col-12">
                                 <label for="formFileLg" class="form-label">Imagem do produto</label>
-                                <input class="form-control form-control-lg" name="imagem" id="formFileLg" type="file" require/>
+                                <input type="file" class="form-control form-control-lg" name="imagem"  onchange="loadFile(event)"/>
+                                <img id="output"/>
+
+                                <script>
+                                    var loadFile = function(event) {
+                                        var output = document.getElementById('output');
+                                        output.src = URL.createObjectURL(event.target.files[0]);
+                                        output.className = 'card-img mt-3';
+                                    }; 
+                                </script>
                             </div>
                             <div class="col-12 mt-1" >
                                 <label for="formFileLg" class="form-label">Cadastrado por</label>
@@ -63,7 +72,7 @@
             </div>
             <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" onclick="validateField()" class="btn-navy">Adicionar</button>
+                    <button type="submit" onclick="validateField('name-two, description-two')" class="btn-navy">Adicionar</button>
                 </form>
             </div>
         </div>

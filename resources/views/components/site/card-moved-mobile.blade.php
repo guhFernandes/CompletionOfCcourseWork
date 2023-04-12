@@ -6,7 +6,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Bermuda</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Bermuda')}}" role="button">Bermuda</a>
                             </li>
                         </ul>
                     </div>
@@ -18,7 +18,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class=" btn-navy fs-5" href="#" role="button">Blazer</a>
+                                <a class=" btn-navy fs-5" href="{{url('test/Blazer')}}" role="button">Blazer</a>
                             </li>
                         </ul>
                     </div>
@@ -30,7 +30,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Blusa</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Blusa')}}" role="button">Blusa</a>
                             </li>
                         </ul>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Body</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Body')}}" role="button">Body</a>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +54,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Bolsa</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Bolsa')}}" role="button">Bolsa</a>
                             </li>
                         </ul>
                     </div>
@@ -66,7 +66,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Calça</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Calca')}}" role="button">Calça</a>
                             </li>
                         </ul>
                     </div>
@@ -78,7 +78,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Colete</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Colete')}}" role="button">Colete</a>
                             </li>
                         </ul>
                     </div>
@@ -90,7 +90,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Jaqueta</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Jaqueta')}}" role="button">Jaqueta</a>
                             </li>
                         </ul>
                     </div>
@@ -103,7 +103,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Jardineira</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Jardineira')}}" role="button">Jardineira</a>
                             </li>
                         </ul>
                     </div>
@@ -115,7 +115,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Macacão</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Macacao')}}" role="button">Macacão</a>
                             </li>
                         </ul>
                     </div>
@@ -127,7 +127,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Sandalia</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Sandalia')}}" role="button">Sandalia</a>
                             </li>
                         </ul>
                     </div>
@@ -139,7 +139,7 @@
                     <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                         <ul class=" list-unstyled mt-auto">
                             <li class="text-center">
-                                <a class="btn-navy fs-5" href="#" role="button">Short</a>
+                                <a class="btn-navy fs-5" href="{{url('test/Short')}}" role="button">Short</a>
                             </li>
                         </ul>
                     </div>

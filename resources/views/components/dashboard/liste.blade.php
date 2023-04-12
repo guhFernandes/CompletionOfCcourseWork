@@ -16,7 +16,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card shadow-lg" style="margin: auto;">
                             <div class="card-body">
-                                <h4 class="fs-5 ">{{ $service }}{{ $key->id }}</h4>
+                                <h4 class="fs-5 text-uppercase">{{ $service }} {{ $key->id }}</h4>
                                 <p class="fs-5">{{ $key->name }}</p>
                             </div>
                             <div class="d-flex justify-content-between card-footer">
@@ -63,7 +63,6 @@
                                 <h4>#{{$key->reference}}</h4>
                                 <img src="{{Storage::url($key->patch)}}" class="h-100 card-img mb-2" alt="{{$key->patch}}">
                                 <p class="fs-5">{{$key->name}}</p>
-                                {{-- <p class="fs-5">{{$cat->name}} | {{$col->description}}</p> --}}
                                 <h4>R${{$key->price}},00</h4>
                             </div>
                             <div class="d-flex justify-content-between card-footer">
@@ -108,10 +107,7 @@
 
 
 
-                @endif
-
-
-                <br>
+                @endif          
             @endforeach
         </div>
     </div>

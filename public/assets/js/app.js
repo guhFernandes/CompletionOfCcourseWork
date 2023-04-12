@@ -9,5 +9,10 @@ if (window.screen.width > 375) {
 function validateField(el) {
     if (document.getElementById(el).value == "") { 
         alert("Campo vazio !");
-    }
+        document.getElementById(el).focus();
+        return false;
+    } 
+}
+function toLimit(el){
+    document.getElementById(el).value = document.getElementById(el).value.substring(0,23);
 }

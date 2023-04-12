@@ -44,12 +44,12 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <a href="{{url('/produto/'.$k->id)}}" style="text-decoration:none;">
                         <div class="card h-100 overflow-hidden rounded-4 shadow-lg">
-                            <img src="{{ Storage::url($k->patch) }}" class="img-card" alt="">
+                            <img src="{{ Storage::url($k->patch) }}" class="img-card" alt="{{ $k->name }}">
                             <div class="d-flex flex-column h-100 p-3 pb-0 text-shadow-1">
                                 <ul class=" list-unstyled mt-auto">
-                                    <li class="text-dark">
-                                        <h4 class="text-navy fs-4">{{ $k->name }}</h4>
-                                        <p class="card-text text-navy fs-4">R${{ $k->price }},00</p>
+                                    <li class="text-navy">
+                                        <h4 class="fs-4">{{ $k->name }}</h4>
+                                        <p class="card-text fs-4">R${{ $k->price }},00</p>
                                     </li>
                                 </ul>
                             </div>
