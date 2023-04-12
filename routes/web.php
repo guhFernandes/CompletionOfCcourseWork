@@ -68,6 +68,7 @@ Route::post('/editar/clothing', [ClothingController::class, 'getClothing'])->mid
 Route::post('/update/clothing', [ClothingController::class, 'updateClothing'])->middleware(['auth', 'verified']);
 Route::post('/deletar/clothing', [ClothingController::class, 'deleteClothing'])->middleware(['auth', 'verified']);
 Route::post('/search/clothing', [ClothingController::class, 'search'])->middleware(['auth', 'verified']);
+Route::post('/search/produtos', [ClothingController::class, 'searchProdutos']);
 
 Route::post('/add/user', [UserController::class, 'create'])->middleware(['auth', 'verified']);
 Route::get('/list/user', [UserController::class, 'getUserAll'])->middleware(['auth', 'verified']);

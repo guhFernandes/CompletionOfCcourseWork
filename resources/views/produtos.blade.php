@@ -5,10 +5,10 @@
     <x-site.navbar-prod />
     <x-site.login/>
 
-    <form action="" method="post" class="container d-flex form-inline mt-2 justify-content-center">
+    <form action="/search/produtos" method="post" class="container d-flex form-inline mt-2 justify-content-center">
         @csrf
         <div class="input-group w-75 mb-3">
-            <input name="search" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Pesquise o produto...">
+            <input name="produtos" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Pesquise o produto...">
             <div class="input-group-append">
                 <button class="btn-navy" type="submit"><img src="{{ asset('storage/imagem/icon/lupa.png') }}" alt="lupa"></button>
             </div>
@@ -16,7 +16,7 @@
     </form>
     <!--Inicio Cards Fixed-->
     <div class="container" id="custom-cards">
-        <h1 class="display-6 m-5 text-center">Bermuda</h1>
+        <h1 class="display-6 m-5 text-center">Produtos</h1>
         <div class="row align-items-stretch g-3 ">
             @foreach ($result as $k)
                 <div class="col-lg-3 col-md-6 col-sm-12">
@@ -37,7 +37,7 @@
                 
             @endforeach
             <div class="col-12">
-                {{ $result->onEachSide(5)->links() }}
+                {{ $result->links() }}
             </div>
         </div>
     </div>
