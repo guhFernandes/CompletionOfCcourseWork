@@ -22,10 +22,11 @@
                 </form>
 
                 <form method="post" action="{{ route('password.update') }}"  class="shadow p-3">
-                    <h3>Atualizar senha</h3>
-                    <p>Certifique-se de que sua conta esteja usando uma senha longa e aleatória para se manter segura.</p>
                     @csrf
                     @method('put')
+                    <h3>Atualizar senha</h3>
+                    <p>Certifique-se de que sua conta esteja usando uma senha longa e aleatória para se manter segura.</p>
+                   
 
                     
 

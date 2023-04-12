@@ -132,6 +132,15 @@ class ClothingController extends Controller
         return view('produtos', ['result' => $result]);
     }
 
+    public function filterCategory(Request $request){
+
+        $gustavo = Category::where('name', $request->name)->get();
+        foreach ($gustavo as $key) {
+            $gustavo_quem_fez = Clothing::where('category_id', '=', $key->id)->paginate();
+        }
+        return view('produtos', ['result'=>$gustavo_quem_fez]);
+    }
+
 
 
 

@@ -70,6 +70,14 @@ Route::post('/deletar/clothing', [ClothingController::class, 'deleteClothing'])-
 Route::post('/search/clothing', [ClothingController::class, 'search'])->middleware(['auth', 'verified']);
 Route::post('/search/produtos', [ClothingController::class, 'searchProdutos']);
 
+
+
+Route::get('/test/{name}', [ClothingController::class, 'filterCategory']);
+
+
+
+
+
 Route::post('/add/user', [UserController::class, 'create'])->middleware(['auth', 'verified']);
 Route::get('/list/user', [UserController::class, 'getUserAll'])->middleware(['auth', 'verified']);
 Route::post('/editar/user', [UserController::class, 'getUser'])->middleware(['auth', 'verified']);
