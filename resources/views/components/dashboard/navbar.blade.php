@@ -62,18 +62,18 @@
                     {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu text-center">
-                    <li data-toggle="dropdown" ><a class="dropdown-item" href="/profile">Informação</a>
-                    </li>
-                    <li>
+                    <li data-toggle="dropdown-item" ><a class="dropdown-item" href="/profile">Configuração</a></li>
+                    <li data-toggle="dropdown-item">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <x-dropdown-link style="color: rgb(0,0,0); text-decoration: none;" :href="route('logout')"
+                            <x-dropdown-link class="dropdown-item" :href="route('logout')"
                                 onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
                     </li>
+                    <li data-toggle="dropdown-item" ><a class="dropdown-item" href="/help">Help</a></li>
                 </ul>
             </div>
         </div>

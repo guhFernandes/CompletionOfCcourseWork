@@ -38,6 +38,10 @@ Route::get('/dicas', function () {
     return view('dica');
 });
 
+Route::get('/help', function () {
+    return view('help');
+});
+
 
 Route::get('/dashboard', [ClothingController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 

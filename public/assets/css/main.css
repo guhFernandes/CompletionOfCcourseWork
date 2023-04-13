@@ -18,6 +18,17 @@
     background-image: linear-gradient(to right, #2551a3 , #19376D);
     color: #A5D7E8;
 }
+#content {
+    display: none;
+}
+#loading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
 #desktop {
     display: none;
 }

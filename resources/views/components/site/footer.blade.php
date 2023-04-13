@@ -17,16 +17,16 @@
             <div class="col-lg-3 mb-3">
                 <h2 class="text-white">Link</h2>
                 <ul class="list-unstyled">
-                    <a class="link-offset-2 link-underline link-underline-opacity-0" href="/">
+                    <a class="link-offset-2 mb-2 link-underline link-underline-opacity-0" href="/">
                         <li class="text-white">Home</li>
                     </a>
-                    <a class="link-offset-2 link-underline link-underline-opacity-0" href="/produtos">
+                    <a class="link-offset-2 mb-2 link-underline link-underline-opacity-0" href="/produtos">
                         <li class="text-white">Produto</li>
                     </a>
-                    <a class="link-offset-2 link-underline link-underline-opacity-0" href="/about">
+                    <a class="link-offset-2 mb-2 link-underline link-underline-opacity-0" href="/about">
                         <li class="text-white">Sobre nós</li>
                     </a>
-                    <a class="link-offset-2 link-underline link-underline-opacity-0" href="/dicas">
+                    <a class="link-offset-2 mb-2 link-underline link-underline-opacity-0" href="/dicas">
                         <li class="text-white">Dicas</li>
                     </a>
                 </ul>

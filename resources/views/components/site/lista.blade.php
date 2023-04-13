@@ -4,6 +4,17 @@
 
             @if ($service == 'clothing')
                 <div class="col-lg-6 col-md-12 col-sm-12 mt-3 mb-3">
+                    <nav aria-label="breadcrumb ">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item fs-5">
+                                <a class="text-navy link-underline link-underline-opacity-0 icon-link"  href="/">
+                                    <img src="{{ asset('storage/imagem//icon/home.png') }}" class="bi" aria-hidden="true" alt=""> 
+                                    Home
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item fs-5 active" aria-current="page">{{ $result->name }}</li>
+                        </ol>
+                    </nav>
                     <img src="{{ Storage::url($result->patch) }}" class="card-img" alt="{{ $result->name }}">
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
