@@ -93,9 +93,10 @@ class ClothingController extends Controller
 
     public function search(Request $request)
     {
+        $result = Clothing::paginate(8);
         $db = Clothing::where('name', 'LIKE', '%' . $request->search . '%')->orWhere('reference','like', '%' . $request->search .'%')
-            ->get();
-        return view('dashboard', ['x' => "list", 'type' => 'clothing', 'list' => $db ,'collection'=>Collection::all(),'category'=>Category::all()]);
+            ->paginate();
+        return view('dashboard', ['x' => "list", 'type' => 'clothing', 'list' => $db ,['result' => $result],'collection'=>Collection::all(),'category'=>Category::all()]);
     }
 
     public function searchProdutos(Request $request)
