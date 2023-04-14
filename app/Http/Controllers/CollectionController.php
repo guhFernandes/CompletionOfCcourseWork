@@ -20,7 +20,7 @@ class CollectionController extends Controller
     }
 
     public function getCollectionAll() {
-        return view('dashboard',['x'=>"list", 'type'=>"collection", 'list'=> Collection::all(),'collection'=>Collection::all(), 'category'=>Category::all()]);
+        return view('dashboard',['x'=>"list", 'type'=>"collection", 'list'=> Collection::paginate(12),'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 
     public function getCollection (Request $request) {

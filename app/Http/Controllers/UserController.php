@@ -24,7 +24,7 @@ class UserController extends Controller
     }
 
     public function getUserAll() {
-        return view('dashboard',['x'=>"list", 'type'=>"user", 'list'=> User::all(),'collection'=>Collection::all(), 'category'=>Category::all()]);
+        return view('dashboard',['x'=>"list", 'type'=>"user", 'list'=> User::paginate(12),'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 
     public function getUser (Request $request) {

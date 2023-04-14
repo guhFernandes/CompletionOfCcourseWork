@@ -20,7 +20,7 @@ class CategoryController extends Controller
     }
 
     public function getCategoryAll() {
-        return view('dashboard',['x'=>"list", 'type'=>"category", 'list'=> Category::all(),'collection'=>Collection::all(), 'category'=>Category::all()]);
+        return view('dashboard',['x'=>"list", 'type'=>"category", 'list'=> Category::paginate(12),'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 
     public function getCategory (Request $request) {

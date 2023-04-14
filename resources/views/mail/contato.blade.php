@@ -26,11 +26,11 @@
     <div >
         <h1>High Fashion</h1>
 
-        <p><strong>De:</strong>high_fashion@gmail.com</p>
+        <p><strong>De:</strong> {{$email}} </p>
 
-        <p><strong>Para:</strong> {{$email}}</p>
+        <p><strong>Para:</strong> high_fashion@gmail.com</p>
 
-        <p>Olá {{$nome}} vimos seu email e entraremos em contato sobre:</p>
+        <p>Olá High Fashion, meu nome é {{$nome}} assim que possivel entrar em contato comigo.</p>
 
         <p><strong>Assunto:</strong> {{$assunto}}</p>
 

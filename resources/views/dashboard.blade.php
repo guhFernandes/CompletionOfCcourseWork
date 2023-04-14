@@ -25,6 +25,15 @@
 
         <!-- Modal Usuario -->
         <x-dashboard.user />
+        
+        @if (@empty($list))
+
+        @else{
+            <div class="col-12 mt-5">
+                {{ $list->links() }}
+            </div>    
+        }
+        @endif
     </div>
 
 @endsection

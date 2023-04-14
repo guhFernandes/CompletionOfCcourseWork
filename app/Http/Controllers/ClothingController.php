@@ -39,8 +39,7 @@ class ClothingController extends Controller
 
     public function getClothingAll()
     {
-        
-        return view('dashboard', ['x' => "list", 'type' => "clothing", 'list' => Clothing::all(), 'collection'=>Collection::all(), 'category'=>Category::all() ]);
+        return view('dashboard', ['x' => "list", 'type' => "clothing", 'list' => Clothing::paginate(8), 'collection'=>Collection::all(), 'category'=>Category::all() ]);
     }
 
     public function getListClothing($id)
@@ -138,7 +137,17 @@ class ClothingController extends Controller
         foreach ($gustavo as $key) {
             $gustavo_quem_fez = Clothing::where('category_id', '=', $key->id)->paginate();
         }
-        return view('produtos', ['result'=>$gustavo_quem_fez]);
+
+        if(empty($gustavo_quem_fez)){
+
+            return view('produtos');
+        }else{
+            return view('produtos', ['result'=>$gustavo_quem_fez]);
+        }
+
+        
+
+
     }
 
 
