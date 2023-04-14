@@ -19,18 +19,11 @@ if (document.getElementById('loading')) {
 if (document.getElementById('loadingDash')) {
     document.body.style.overflow = 'hidden';
 } 
-
-function cardMovd() {
-    if (screen.width > 375) {
-        document.getElementById('desktop').style.display = 'block';  
-    
-    } else {
-        document.getElementById('mobile').style.display = 'block';
-    }
-    
+if (screen.width > 375) {
+    document.getElementById('desktop').style.display = 'block';  
+} else {
+    document.getElementById('mobile').style.display = 'block';
 }
-
-
 function validateField(el) {
     if (document.getElementById(el).value == "") { 
         alert("Campo vazio !");
