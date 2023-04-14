@@ -5,7 +5,7 @@ if (document.getElementById('loading')) {
 
         document.getElementById('loading').style.display = "none";
         document.getElementById('content').style.display = "block";
-    }, 900); 
+    }, 1650); 
 }else if (document.getElementById('loadingDash')){
     var i = setInterval(function () {
         
@@ -14,7 +14,7 @@ if (document.getElementById('loading')) {
         document.getElementById('loadingDash').style.display = "none";
         document.getElementById('contentDash').style.display = "block";
         document.body.style.overflow = 'visible';
-    }, 1000);
+    }, 999);
 } else {
     clearInterval(i);
 }
