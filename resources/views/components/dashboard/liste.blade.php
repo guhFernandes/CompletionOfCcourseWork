@@ -90,11 +90,11 @@
                                 <h4>{{$key->name}} </h4>
                                 <p class="fs-5">{{$key->email}}</p>
                             </div>
-                            <div class="d-flex justify-content-between card-footer">
-                                <form action="/deletar/{{ $service }}" method="post">
+                            <div class="d-flex justify-content-center card-footer">
+                                <form action="/deletar/{{ $service }}" class="" method="post">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $key->id }}">
-                                <button type="submit" class="btn "><img src="{{ asset('storage/imagem/icon/excluir.png') }}" width="45" height="45" alt="excluir"></button>
+                                    <button type="submit" class="btn "><img src="{{ asset('storage/imagem/icon/excluir.png') }}" width="45" height="45" alt="excluir"></button>
                                 </form>
                             </div>
                         </div>

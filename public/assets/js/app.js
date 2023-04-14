@@ -5,29 +5,27 @@ if (document.getElementById('loading')) {
 
         document.getElementById('loading').style.display = "none";
         document.getElementById('content').style.display = "block";
-
     }, 900); 
-}else{
+}else if (document.getElementById('loadingDash')){
     var i = setInterval(function () {
+        
         clearInterval(i);
     
         document.getElementById('loadingDash').style.display = "none";
         document.getElementById('contentDash').style.display = "block";
         document.body.style.overflow = 'visible';
-    }, 900);
+    }, 1000);
+} else {
+    clearInterval(i);
 }
 if (document.getElementById('loadingDash')) {
+    document.getElementById('contentDash').style.display = "none";
+    document.getElementById('loadingDash').scrollIntoView(true);
     document.body.style.overflow = 'hidden';
 } 
-if (screen.width > 375) {
-    document.getElementById('desktop').style.display = 'block';  
-} else {
-    document.getElementById('mobile').style.display = 'block';
-}
 function validateField(el) {
     if (document.getElementById(el).value == "") { 
         alert("Campo vazio !");
-        document.getElementById(el).focus();
         return false;
     } 
 }
