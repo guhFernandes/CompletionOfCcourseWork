@@ -39,8 +39,17 @@
     overflow: hidden;
 }
 #desktop {
-    display: none;
+    display: block;
 }
 #mobile {
     display: none;
+}
+@media (max-width: 990px)
+{
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
 }
