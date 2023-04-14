@@ -35,7 +35,7 @@
         <x-site.card-moved-mobile/> 
 
 
-        <h1 class="display-6 m-5 text-navy text-center">Produtos em destaque</h1>
+        <h1 class="display-6 m-5 text-navy text-center">Ultimos lançamentos</h1>
 
         <!--Inicio Cards Fixed-->
 
