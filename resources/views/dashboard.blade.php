@@ -1,26 +1,30 @@
 @extends('layouts.layout')
 @section('title', 'Dashboard')
 @section('content')
+    
+    <x-dashboard.navbar />
+    <div id="loadingDash">
+        <img src="{{ asset('storage/imagem/banner/loading.gif') }}" alt="loadingDash">
+    </div>
+    <div id="contentDash">
+        <!--Inicio Card da tela de admin -->
+        @if ($x == 'list')
+            <x-dashboard.liste :result="$list" :service="$type" />
+        @else
+        @endif
 
-<x-dashboard.navbar />
+        <!-- Fim Card da tela de admin -->
+        <x-dashboard.category />
 
-<!--Inicio Card da tela de admin -->
-@if ($x == 'list')
-<x-dashboard.liste :result="$list" :service="$type" />
-@else
-@endif
+        <!-- Modal Tipo -->
+        <x-dashboard.collection />
 
-<!-- Fim Card da tela de admin -->
-<x-dashboard.category />
+        <!-- Modal Produto -->
 
-<!-- Modal Tipo -->
-<x-dashboard.collection />
+        <x-dashboard.clothing :collection="$collection" :category="$category" />
 
-<!-- Modal Produto -->
-
-<x-dashboard.clothing :collection="$collection" :category="$category" />
-
-<!-- Modal Usuario -->
-<x-dashboard.user />
+        <!-- Modal Usuario -->
+        <x-dashboard.user />
+    </div>
 
 @endsection

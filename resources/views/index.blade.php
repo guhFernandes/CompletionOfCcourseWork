@@ -4,7 +4,7 @@
     <div id="loading" >
         <img src="{{ asset('storage/imagem/banner/loading.gif') }}" alt="loading">
     </div>
-    <div id="content" >
+    <div id="content" onload="cardMovd()" >
         <x-site.navbar />
 
         <x-site.login/>
@@ -28,7 +28,6 @@
             </button>
         </div>
         <!-- Fim do carrossel -->
-
 
         <x-site.card-moved-desktop/>
 
