@@ -42,8 +42,9 @@ class CategoryController extends Controller
     }
 
     public function search(Request $request) {
+        $result = Category::paginate(8);
         $db = Category::where('name','LIKE', '%' . $request->search. '%')
-                ->get();
-                return view('dashboard',['x'=>"list", 'type'=>"category", 'list'=> $db,'collection'=>Collection::all(), 'category'=>Category::all()]);
+            ->paginate();
+        return view('dashboard',['x'=>"list", 'type'=>"category", 'list'=> $db,['result' => $result],'collection'=>Collection::all(), 'category'=>Category::all()]);
     }
 }
