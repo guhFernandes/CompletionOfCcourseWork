@@ -21,10 +21,9 @@
                     consequente expandiu seu parque fabril agregando máquinas de última geração, automação de processos e
                     utilização de softwares de design, criação e desenvolvimento.
                     No ano de 1994, Christian Vuitton (genro de Gianni) e Gabrielle Courrège (nora de Yves), entram para a
-                    Sociedade e dão continuidade à visão de crescimento da Empresa.
-                    Já no ano 2000, a "High Fashion" começa a investir em Lojas próprias com uma coleção exclusiva
-                    direcionada à venda direta, sendo que em 2002 este segmento já respondia por 35% do faturamento da
-                    Empresa.
+                    Sociedade e dão continuidade à visão de crescimento da Empresa. Já no ano 2000, a "High Fashion" começa a 
+                    investir em Lojas próprias com uma coleção exclusiva direcionada à venda direta, sendo que em 2002 este 
+                    segmento já respondia por 35% do faturamento da empresa.
                     Em 2009, uma nova oportunidade surge no horizonte da Empresa, que passa a ter franquias de sua marca o
                     que abre novos mercados para a Empresa.
                     Como última ação de marketing e agilidade dos processos, a "High Fashion" pretende lançar um site
@@ -35,7 +34,7 @@
                 </p>
             </div>
         </div>
-        <div class="row mt-3 shadow-lg py-3">
+        <div class="row mt-4 mb-4 shadow-lg py-3">
             <h2 class="text-center display-4 mt-2 mb-5 text-navy">Localização</h2>
             <div class="col-lg-6 text-center">
                 <iframe
@@ -68,13 +67,38 @@
                         </div>
                         <div class="col-12 mb-2">
                             <label for="description" class="form-label text-navy">Enviar Mensagem</label>
-                            <textarea class="form-control" name="message" id="description" rows="2" required></textarea>
+                            <textarea class="form-control" name="message" id="description" rows="5" required></textarea>
                         </div>
                     </div>
 
 
                     <button type="submit" class=" btn-navy fs-4">Enviar</button>
                 </form>
+
+            </div>
+        </div>
+    
+        <div class="row mt-3 g-2 justify-content-evenly">
+            <h2 class="m-5 text-center display-5 text-navy">Nossas Lojas</h2>
+            <div class="col-lg-3">
+                <h4 class=" text-navy text-center">Minas Gerais</h4>
+                <p class="mb-3 text-navy">Av. Barão do Rio Branco, 1235 - Juiz de Fora - CEP: 36125-080 - Telefone: (32)3211-3211; </p>
+                <p class="mb-3 text-navy">Av. Getúlio Vargas, 852 - Juiz de Fora - CEP: 36852-123 - Telefone: (32)3235-5323; </p>
+                <p class="mb-3 text-navy">Av. Cel. Souza, 521 - Bicas - CEP:36600-000 - Telefone: (32)3271-1723;  </p>
+                <p class="mb-3 text-navy">Av. Savassy, 1258 Loja 108 - CEP: 34256-754 - Telefone: (31)4325-6547;  </p>
+                <p class="mb-3 text-navy">R. Cel. José Dutra, 128 - S. J. Nepomuceno - CEP: 36680-000 - Telefone: (32)3261-9874;</p>
+            </div>
+            <div class="col-lg-3">
+                <h4 class=" text-navy text-center">Rio de Janeiro </h4>
+                <p class="mb-3 text-navy">Av. Atlântica, 2546 - Rio de Janeiro - CEP: 21258-456 Telefone: (21)2123-2321; </p>
+                <p class="mb-3 text-navy">Av. Nossa Senha de Copacabana, 1874 - Rio de Janeiro CEP: 22587-632- Telefone: (21)3265-9632;  </p>
+                <p class="mb-3 text-navy">Rua do Catete, 123 - Rio de Janeiro - CEP: 21123-321 - Telefone: (21)6932-7563; </p>
+            </div>
+            <div class="col-lg-3">
+                <h4 class=" text-navy text-center">São Paulo </h4>
+                <p class="mb-3 text-navy">Rua da Graça, 456/202 - São Paulo - CEP: 11587-756 - Telefone: (11)1236-7410; </p>
+                <p class="mb-3 text-navy">Rua do Oriente, 857/104 - São Paulo - CEP: 12321-852 - Telefone: (11) 4256-9632 </p>
+                
             </div>
         </div>
     </div>

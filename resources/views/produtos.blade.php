@@ -19,12 +19,14 @@
     <!--Inicio Cards Fixed-->
     <div class="container min-vh-100" id="custom-cards">
         @if (empty($result))
-            <h1 class="display-6 m-5 text-center">CATEGORIA NÃO CADASTRADA</h1>
+            <div class="alert alert-primary" role="alert">
+                Categoria Não Cadastrada
+            </div>
         @else
             @if (empty($result))
-                <h1 class="display-6 m-5 text-center">NENHUM PRODUTO CADASTRADO</h1>
-            
-                
+                <div class="alert alert-primary" role="alert">
+                    Nenhum Produto Cadastrados
+                </div>
             @else
             <h1 class="display-6 m-5 text-center">Produtos</h1>
             <div class="row align-items-stretch g-3 ">
