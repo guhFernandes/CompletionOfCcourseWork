@@ -709,11 +709,13 @@ class DatabaseSeeder extends Seeder
             'user'=>'Instrutor',
             'collection_id'=>'4',
         ]);
+
+        //Fal
         DB::table('clothing')->insert([
             'reference'=>'0062',
             'name'=>'Jardineira Zune Jeans',
             'description'=>'',
-            'price'=>'',
+            'price'=>'97',
             'patch'=>'/roupas/jardineira_6',
             'category_id'=>'9',
             'user'=>'Instrutor',
@@ -869,9 +871,9 @@ class DatabaseSeeder extends Seeder
             'description'=>'',
             'price'=>'199',
             'patch'=>'/roupas/sandalia_5',
-            'category_id'=>'',
+            'category_id'=>'11',
             'user'=>'Instrutor',
-            'collection_id'=>'',
+            'collection_id'=>'4',
         ]);
         DB::table('clothing')->insert([
             'reference'=>'0078',
