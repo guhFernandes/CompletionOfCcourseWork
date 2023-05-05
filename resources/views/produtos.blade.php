@@ -46,7 +46,9 @@
                         </div>
                     @endforeach
                     <div class="col-12">
-                        {{ $result->links() }}
+                        {{ $result->appends([
+                            'search' => request()->get('search', '')
+                        ])->links() }}
                     </div>
                 </div>
             @endif
